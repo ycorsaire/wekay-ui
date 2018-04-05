@@ -31,3 +31,30 @@ Gulp is an NPM module and must be installed globally
 
 `git clone https://github.com/ycorsaire/wekay-ui.git`
 
+
+#### Install http-server 
+
+http-server is a command-line http server.
+[http-server documentation](https://www.npmjs.com/package/http-server)
+
+Installing globally
+
+`npm intall -g http-server`
+
+### Getting started
+
+Open a terminal and launch the following command
+`cd wekay-ui`
+`npm run build`
+
+The last command will build semantic assets, css and javascript files.
+
+Serve the app with http-server:
+
+`http-server .`
+
+#### Re deploy on file change
+
+For the app to be redeployed on file change, in an other terminal prompt launch the following command
+
+`npm run watch`
