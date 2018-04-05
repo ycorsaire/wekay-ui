@@ -29,5 +29,5 @@ Gulp is an NPM module and must be installed globally
 
 #### Download sources from Wekay-UI repository
 
-`git clone https://ycorsaire@bitbucket.org/ycorsaire/wekay-ui.git`
+`git clone https://github.com/ycorsaire/wekay-ui.git`
 
