@@ -44,7 +44,9 @@ Installing globally
 ### Getting started
 
 Open a terminal and launch the following command
+
 `cd wekay-ui`
+
 `npm run build`
 
 The last command will build semantic assets, css and javascript files.
