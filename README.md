@@ -5,6 +5,7 @@
 * WeKay UI Theme
 * Version 1.0.0
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* [Learn semantic ui theming](https://semantic-ui.com/usage/theming.html)
 
 ### How do I get set up? ###
 
