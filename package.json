@@ -1,0 +1,21 @@
+{
+  "name": "wekay-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"cd semantic && gulp build-css build-assets build-javascript",
+    "watch": "cd semantic && npm run build && gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ycorsaire@bitbucket.org/ycorsaire/wekay-ui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/ycorsaire/wekay-ui#readme",
+  "dependencies": {
+    "semantic-ui": "^2.3.1"
+  }
+}
