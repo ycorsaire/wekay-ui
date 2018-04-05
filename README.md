@@ -1,7 +1,5 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
-
 ### What is this repository for? ###
 
 * WeKay UI Theme
@@ -10,29 +8,29 @@ This README would normally document whatever steps are necessary to get your app
 
 ### How do I get set up? ###
 
-#### Install git
+#### Install git ####
 [Git Install website](https://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide-Installation-de-Git)
 
-#### Install node
+#### Install node ####
 * On Mac
 `brew install node`
 
 * On Windows
 [Download latest version of node](https://nodejs.org/download/release/latest/)
 
-#### Install Gulp
+#### Install Gulp ####
 Semantic UI uses Gulp to provide command line tools for building themed versions of the library with just the components you need.
 
 Gulp is an NPM module and must be installed globally
 
 `npm install -g gulp`
 
-#### Download sources from Wekay-UI repository
+#### Download sources from Wekay-UI repository ####
 
 `git clone https://github.com/ycorsaire/wekay-ui.git`
 
 
-#### Install http-server 
+#### Install http-server #### 
 
 http-server is a command-line http server.
 [http-server documentation](https://www.npmjs.com/package/http-server)
@@ -41,7 +39,7 @@ Installing globally
 
 `npm intall -g http-server`
 
-### Getting started
+### Getting started ###
 
 Open a terminal and launch the following command
 
@@ -55,7 +53,7 @@ Serve the app with http-server:
 
 `http-server .`
 
-#### Re deploy on file change
+#### Re deploy on file change ####
 
 For the app to be redeployed on file change, in an other terminal prompt launch the following command
 
