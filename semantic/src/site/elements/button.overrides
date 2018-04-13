@@ -1,3 +1,9 @@
 /*******************************
          Site Overrides
 *******************************/
+
+.ui.inverted.button:hover {
+  background: @blue;
+  box-shadow: 0px 0px 0px @invertedBorderSize @white inset !important;
+  color: @hoverColor;
+}
