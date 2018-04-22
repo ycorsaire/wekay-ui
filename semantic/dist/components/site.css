@@ -251,5 +251,5 @@ h1.ui.header {
   box-shadow: 0px 0px 0px 2px #f6a015 inset !important;
 }
 .bg-HP {
-  background-image: url('../assets/images/visuel-HP.jpg') !important;
+  background-image: url('../../assets/images/visuel-HP.jpg') !important;
 }
