@@ -4,3 +4,12 @@
 
 @primaryColor   : @orange;
 @secondaryColor : @grey;
+
+/*-------------------
+       Fonts
+--------------------*/
+
+@headerFont    : 'Raleway','Helvetica Neue',Arial,Helvetica, sans-serif;
+@pageFont      : 'Raleway','Helvetica Neue',Arial,Helvetica, sans-serif;
+@titleFont     :  font-family: 'Playfair Display', serif;
+

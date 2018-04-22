@@ -1,3 +1,14 @@
 /*******************************
     User Variable Overrides
 *******************************/
+
+
+
+.ui.header{
+    font-family: 'Playfair Display', serif;
+    font-weight:900!important;}
+
+h1{ 
+    font-family: 'Playfair Display', serif;
+    font-weight:900!important;}
+
