@@ -66,6 +66,14 @@
       display: none;
     }
 
+    .dd-cta-form {
+        display:inline-block;
+    }
+    .profile-segment-container {
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }    
+
     @media only screen and (max-width: 700px) {
       .ui.fixed.menu {
         display: none !important;
@@ -87,7 +95,7 @@
       .masthead h2 {
         margin-top: 0.5em;
         font-size: 1.5em;
-      }
+      }     
     }
 
 
@@ -122,32 +130,55 @@
 
 <!-- Page Contents -->
 <div class="pusher">
-  <div class="ui inverted vertical masthead center aligned segment bg-HP">
-
-    <div class="ui container">
-      <div class="ui large secondary inverted pointing menu">
-        <a class="toc item">
+  <!-- Jumbotron  -->
+    <div class="ui inverted vertical masthead center aligned segment jumbotron bg-HP">
+      
+      <div class="ui large inverted pointing secondary menu">
+      <a class="toc item">
           <i class="sidebar icon"></i>
-        </a>
-        <a class="active item">Demander un devis</a>
-        <a class="item">Trouver un professionnel</a>
-        <a class="item">Comment ça marche</a>
-        <a class="item">Se connecter</a>
-        <div class="right item">
-          <a class="ui inverted button">Vous êtes un professionnel</a>
+        </a>        
+        <div class="ui fluid container">
+          <a class="right item">Demander un devis</a>
+          <a class="item">Trouver un professionnel</a>
+          <a class="item">Comment ça marche</a>
+          <a class="item" href="/#">Se connecter</a>
+          <div class="item">
+            <a class="ui inverted button" role="button" href="/pro">Vous êtes un professionnel</a>
+          </div>
         </div>
+      </div>
+      <div class="ui text container">
+        <h1 class="ui inverted header">Vous souhaitez réaliser des travaux ?</h2>
+        <h2 class="ui inverted header">Nous trouvons le professionnel qu'il vous faut !</h2>
+
+        <form class="ui large form dd-cta-form">
+          <div class="fields">
+            <div class="field">
+              <div name="project" role="listbox" aria-expanded="false" class="ui selection dropdown" tabindex="0" style="width: 350px;">
+                <div class="default text" role="alert" aria-live="polite">Quel projet souhaitez vous réaliser ?</div>
+                <i aria-hidden="true" class="dropdown icon"></i>
+                <div class="menu transition">
+                  <div role="option" aria-checked="false" aria-selected="true" class="selected item" style="pointer-events: all;">
+                    <span class="text">Architecture - Expertise</span>
+                  </div>
+                  <div role="option" aria-checked="false" aria-selected="false" class="item" style="pointer-events: all;">
+                    <span class="text">Assainissement - Terrassement</span>
+                  </div>
+                  <div role="option" aria-checked="false" aria-selected="false" class="item" style="pointer-events: all;">
+                    <span class="text">Construction - Extension</span>
+                  </div>
+                  <div role="option" aria-checked="false" aria-selected="false" class="item" style="pointer-events: all;">
+                    <span class="text">Rénovation complète</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="ui primary large button" role="button" href="/devis">Demander un devis</a>
+          </div>
+        </form>
       </div>
     </div>
 
-    <div class="ui text container">
-      <h1 class="ui inverted header">
-        Vous souhaitez réaliser des travaux ?
-      </h1>
-      <h2>Nous trouvons le professionnel qu'il vous faut !</h2>
-      <div class="ui huge primary button">Demander un devis <i class="right arrow icon"></i></div>
-    </div>
-
-  </div>
 <!-- Comment ça marche -->
   <div class="ui vertical segment" style="padding: 4em 0em;">
     <div class="ui stackable grid">
@@ -222,6 +253,149 @@
     </div>
   </div>
 </div>
+
+<!-- Reassurance -->
+<div class="ui vertical segment" style="padding: 4em 0em;">
+    <div class="ui stackable grid">
+      <div class="row">
+        <div class="column">
+          <h3 class="ui center aligned header" style="font-size: 3em;">3 raisons de nous faire confiance </h3>
+        </div>
+      </div>
+      <div class="three column row" style="padding: 5em 0em;">
+        <div class="center aligned column">
+          <i aria-hidden="true" class="phone massive icon"></i>
+          <p style="padding-top: 1em;">
+            <div class="ui orange huge circular label">1</div>
+          </p>
+          <p style="font-size: 1.2em; padding: 0em 1.5em;">Des conseillers WeKay à votre service</p>
+        </div>
+        <div class="center aligned column">
+          <i aria-hidden="true" class="sticky note outline massive icon"></i>
+          <p style="padding-top: 1em;">
+            <div class="ui orange huge circular label">2</div>
+          </p>
+          <p style="font-size: 1.2em; padding: 0em 1.5em;">Des artisans qualifiés</p>
+        </div>
+        <div class="center aligned column">
+          <i aria-hidden="true" class="lock massive icon"></i>
+          <p style="padding-top: 1em;">
+            <div class="ui orange huge circular label">3</div>
+          </p>
+          <p style="font-size: 1.2em; padding: 0em 1.5em;">Un paiement sécurisé qui vous assure des travaux de qualité</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<!-- Temoignage -->
+  <div class="ui vertical stripe segment">
+      <div class="ui middle aligned stackable grid container">
+          <div class="row">
+            <div class="column">
+              <h3 class="ui center aligned header" style="font-size: 3em;">Ils nous font déjà confiance!</h3>
+            </div>
+          </div>
+        <div class="row">
+          <div class="six wide right floated column">
+            <img src="/assets/images/image_2.png" class="ui large bordered rounded image">
+          </div>
+          <div class="eight wide column">
+            
+            <p>Merci pour votre service!</p>
+            
+            <p>Je suis passée par WeKay pour trouver un professionnel afin de rénover un appartement.
+              Facile et simple d'utilisation, j'ai été contacté rapidement. J'ai alors pu comparer les différents devis.
+              Le mode de paiement m'a particulièrement plu car il offre une sécurité non négligeable en cas de travaux baclés.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>  
+
+<!--Réseau pro-->
+<div class="ui container profile-segment-container">
+  <h2 class="ui middle header heading-text">Notre réseau de professionnels </h2>
+  <div class="ui four cards">
+    <div class="ui card">
+      <img src="/assets/images/image_2.png" class="ui image">
+      <div class="content">
+        <div class="header">Charpentier, Couvreur</div>
+        <div class="meta">
+          <i aria-hidden="true" class="check disabled icon"></i>Kbis</div>
+        <div class="meta">
+          <i aria-hidden="true" class="check disabled icon"></i>Assurance décennale</div>
+        <div class="description">4 Chantiers</div>
+      </div>
+      <div class="extra center aligned content">
+        <div class="ui star massive rating" role="radiogroup">
+          <i aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+          <i aria-checked="false" aria-posinset="2" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+          <i aria-checked="false" aria-posinset="3" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+          <i aria-checked="false" aria-posinset="4" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+          <i aria-checked="true" aria-posinset="5" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+        </div>
+      </div>
+    </div>
+    <div class="ui card">
+      <img src="/assets/images/image_2.png" class="ui image">
+      <div class="content">
+        <div class="header">Peintre, Plombier</div>
+        <div class="meta">
+          <i aria-hidden="true" class="check disabled icon"></i>Kbis</div>
+        <div class="description">11 Chantiers</div>
+      </div>
+      <div class="extra center aligned content">
+        <div class="ui star massive rating" role="radiogroup">
+          <i aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+          <i aria-checked="false" aria-posinset="2" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+          <i aria-checked="false" aria-posinset="3" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+          <i aria-checked="false" aria-posinset="4" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+          <i aria-checked="true" aria-posinset="5" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+        </div>
+      </div>
+    </div>
+    <div class="ui card">
+      <img src="/assets/images/image_2.png" class="ui image">
+      <div class="content">
+        <div class="header">Rénovation intérieur</div>
+        <div class="meta">
+          <i aria-hidden="true" class="check disabled icon"></i>Kbis</div>
+        <div class="meta">
+          <i aria-hidden="true" class="check disabled icon"></i>Assurance décennale</div>
+        <div class="description">7 Chantiers</div>
+      </div>
+      <div class="extra center aligned content">
+        <div class="ui star massive rating" role="radiogroup">
+          <i aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+          <i aria-checked="false" aria-posinset="2" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+          <i aria-checked="false" aria-posinset="3" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+          <i aria-checked="false" aria-posinset="4" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+          <i aria-checked="true" aria-posinset="5" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+        </div>
+      </div>
+    </div>
+    <div class="ui card">
+      <img src="/assets/images/image_2.png" class="ui image">
+      <div class="content">
+        <div class="header">Electricien</div>
+        <div class="meta">
+          <i aria-hidden="true" class="check disabled icon"></i>Kbis</div>
+        <div class="description">8 Chantiers</div>
+      </div>
+      <div class="extra center aligned content">
+        <div class="ui star massive rating" role="radiogroup">
+          <i aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+          <i aria-checked="false" aria-posinset="2" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+          <i aria-checked="false" aria-posinset="3" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+          <i aria-checked="false" aria-posinset="4" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+          <i aria-checked="true" aria-posinset="5" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Article-->
 
 
 <!-- FOOTER-->
