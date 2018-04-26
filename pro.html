@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <style type="text/css">
+
+    .hidden.menu {
+      display: none;
+    }
+
+    .masthead.segment {
+      min-height: 600px;
+      padding: 1em 0em;
+    }
+    .masthead .logo.item img {
+      margin-right: 1em;
+    }
+    .masthead .ui.menu .ui.button {
+      margin-left: 0.5em;
+    }
+    .masthead h1.ui.header {
+      margin-top: 3em;
+      margin-bottom: 0em;
+      font-size: 4em;
+      font-weight: normal;
+    }
+    .masthead h2 {
+      font-size: 1.7em;
+      font-weight: normal;
+    }
+
+    .ui.vertical.stripe {
+      padding: 8em 0em;
+    }
+    .ui.vertical.stripe h3 {
+      font-size: 2em;
+    }
+    .ui.vertical.stripe .button + h3,
+    .ui.vertical.stripe p + h3 {
+      margin-top: 3em;
+    }
+    .ui.vertical.stripe .floated.image {
+      clear: both;
+    }
+    .ui.vertical.stripe p {
+      font-size: 1.33em;
+    }
+    .ui.vertical.stripe .horizontal.divider {
+      margin: 3em 0em;
+    }
+
+    .quote.stripe.segment {
+      padding: 0em;
+    }
+    .quote.stripe.segment .grid .column {
+      padding-top: 5em;
+      padding-bottom: 5em;
+    }
+
+    .footer.segment {
+      padding: 5em 0em;
+    }
+
+    .secondary.pointing.menu .toc.item {
+      display: none;
+    }
+
+    .dd-cta-form {
+        display:inline-block;
+    }
+    .profile-segment-container {
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+
+    .jumbotron {
+        min-height: 600px;
+        padding: 1em 0em;
+    }    
+
+    .jumbotron-heading {
+        font-size: 2em !important;
+        font-weight: bold !important;
+        margin-top: 5em !important;
+        margin-bottom: 1em !important;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .ui.fixed.menu {
+        display: none !important;
+      }
+      .secondary.pointing.menu .item,
+      .secondary.pointing.menu .menu {
+        display: none;
+      }
+      .secondary.pointing.menu .toc.item {
+        display: block;
+      }
+      .masthead.segment {
+        min-height: 350px;
+      }
+      .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+      }
+      .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+      }     
+    }
+
+
+  </style>
+
+</head>
+<body>
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
+  <div class="ui container">
+    <a class="right item">Comment ça marche</a>
+    <a class="item">S'inscrire</a>
+    <a class="item">Se connecter</a>
+    <div class="right menu">
+      <div class="item">
+        <a class="ui button">Vous êtes un particulier ?</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+  <a class="item">Comment ça marche</a>
+  <a class="item">S'inscrire</a>
+  <a class="item">Se connecter</a>
+  <a class="item">Vous êtes un particulier ?</a>
+</div>
+
+
+<!-- Page Contents -->
+<div class="pusher">
+  <!-- Jumbotron  -->
+    <div class="ui inverted vertical masthead center aligned segment jumbotron bg-HP">
+      
+      <div class="ui large inverted pointing secondary menu">
+      <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>        
+        <div class="ui fluid container">
+          <a class="right item">Comment ça marche</a>
+          <a class="item">S'inscrire</a>
+          <a class="item" href="/#">Se connecter</a>
+          <div class="item">
+            <a class="ui inverted button" role="button" href="/">Vous êtes un particulier</a>
+          </div>
+        </div>
+      </div>
+      <div class="ui text container">
+            <h2 class="ui inverted header jumbotron-heading">Trouver de nouveaux chantier en toute simplicité et sans engagement !</h2>
+      </div>
+    <div class="ui text container">
+        <a class="ui primary large button" role="button" href="#">S'inscrire</a>
+    </div>
+    </div>
+
+<!-- Comment ça marche -->
+  <div class="ui vertical segment" style="padding: 4em 0em;">
+    <div class="ui stackable grid">
+      <div class="row">
+        <div class="column">
+          <h3 class="ui center aligned header" style="font-size: 3em;">Comment ça marche ?</h3>
+        </div>
+      </div>
+      <div class="four column row" style="padding: 5em 0em;">
+        <div class="center aligned column">
+          <i aria-hidden="true" class="laptop massive icon"></i>
+          <p style="padding-top: 1em;">
+            <div class="ui orange huge circular label">1</div>
+          </p>
+          <p style="font-size: 1.2em; padding: 0em 1.5em;">Tout d'abord, décrivez nous votre projet</p>
+        </div>
+        <div class="center aligned column">
+          <i aria-hidden="true" class="sticky note outline massive icon"></i>
+          <p style="padding-top: 1em;">
+            <div class="ui orange huge circular label">2</div>
+          </p>
+          <p style="font-size: 1.2em; padding: 0em 1.5em;">Faites votre choix parmi les devis que vous recevrez</p>
+        </div>
+        <div class="center aligned column">
+          <i aria-hidden="true" class="payment massive icon"></i>
+          <p style="padding-top: 1em;">
+            <div class="ui orange huge circular label">3</div>
+          </p>
+          <p style="font-size: 1.2em; padding: 0em 1.5em;">Avec WeKay, payez vos travaux de manière sécurisée !</p>
+        </div>
+        <div class="center aligned column">
+          <i aria-hidden="true" class="home massive icon"></i>
+          <p style="padding-top: 1em;">
+            <div class="ui orange huge circular label">4</div>
+          </p>
+          <p style="font-size: 1.2em; padding: 0em 1.5em;">Et voilà, votre projet peut commencer !</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="center aligned column">
+          <button class="ui primary huge basic button" role="button">En savoir plus</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Reassurance -->
+<div class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid">
+        <div class="row">
+            <div class="ten wide column">
+                
+                <p>Mise en relation gratuite avec les clients.</p>
+                
+                <p>Moins de prospection, plus de revenus.</p>
+            </div>
+            <div class="six wide right floated column">
+                <img src="/assets/images/image_2.png" class="ui large bordered rounded image">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid">
+        <div class="row">
+            <div class="six wide right floated column">
+                <img src="/assets/images/image_2.png" class="ui large bordered rounded image">
+            </div>
+            <div class="ten wide column">
+
+                <p>Contractualisation en ligne sur WeKay</p>
+
+                <p>Devis et factures automatisées</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--App-->
+<div class="ui vertical segment">
+    <div class="ui stackable grid">
+        <div class="row">
+            <div class="column">
+                <h3 class="ui center aligned header" style="font-size: 3em;">Une application simple d'utilisation à votre service</h3>
+            </div>
+        </div>
+        <div class="one column row">
+            <div class="center aligned column">
+                <img src="/assets/images/image_2.png" class="ui image" style="margin-left:auto;margin-right:auto;">
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="center aligned column">
+                <button class="ui orange huge basic button" role="button">S'inscrire</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Temoignage -->
+<div class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid container">
+        <div class="row">
+            <div class="column">
+                <h3 class="ui center aligned header" style="font-size: 3em;">Ils nous font déjà confiance!</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="six wide right floated column">
+                <img src="/assets/images/image_2.png" class="ui large bordered rounded image">
+            </div>
+            <div class="eight wide column">
+
+                <p>Merci pour votre service!</p>
+
+                <p>Je suis passée par WeKay pour trouver un professionnel afin de rénover un appartement. Facile et simple d'utilisation,
+                    j'ai été contacté rapidement. J'ai alors pu comparer les différents devis. Le mode de paiement m'a particulièrement
+                    plu car il offre une sécurité non négligeable en cas de travaux baclés.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Article-->
+
+
+<!-- FOOTER-->
+  <div class="ui inverted vertical segment">
+    <div class="ui container">
+      <div class="ui stackable grid">
+        <div class="four column row">
+          <div class="column">
+            <h4 class="ui inverted header">Vous êtes un particulier ?</h4>
+            <div role="list" class="ui inverted link list">
+              <a role="listitem" class="item">Demander un devis</a>
+              <a role="listitem" class="item">Trouver un professionnel</a>
+              <a role="listitem" class="item">Comment ça marche ?</a>
+              <a role="listitem" class="item">Nos émissions et conseils</a>
+              <a role="listitem" class="item">Se Connecter</a>
+              <a role="listitem" class="item">Mentions légales &amp; CGV</a>
+              <a role="listitem" class="item">Nous contacter</a>
+            </div>
+          </div>
+          <div class="column">
+            <h4 class="ui inverted header">Vous êtes un professionnel ?</h4>
+            <div role="list" class="ui inverted link list">
+              <a role="listitem" class="item">Comment ça marche ?</a>
+              <a role="listitem" class="item">S'inscrire</a>
+              <a role="listitem" class="item">Se Connecter</a>
+              <a role="listitem" class="item">Mentions légales &amp; CGV</a>
+              <a role="listitem" class="item">Nous contacter</a>
+            </div>
+          </div>
+          <div class="column">
+            <h4 class="ui inverted header">Abonnez-vous à notre newsletter :</h4>
+            <p>Découvrez nos conseils et dernières nouveautés en vous inscrivant à notre newsletter.</p>
+            <form class="ui form">
+              <div class="ui action input newsletter">
+                <input type="email" placeholder="Votre email">
+                <button class="ui primary button" role="button">Ok</button>
+              </div>
+            </form>
+          </div>
+          <div class="column">
+            <h4 class="ui inverted header">Suivez nous :</h4>
+            <div>
+              <button class="ui facebook icon button" role="button">
+                <i aria-hidden="true" class="facebook icon"></i>
+              </button>
+              <button class="ui twitter icon button" role="button">
+                <i aria-hidden="true" class="twitter icon"></i>
+              </button>
+              <button class="ui linkedin icon button" role="button">
+                <i aria-hidden="true" class="linkedin icon"></i>
+              </button>
+              <button class="ui google plus icon button" role="button">
+                <i aria-hidden="true" class="google plus icon"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="semantic/dist/semantic.min.js"></script>
+  <script>
+  $(document)
+    .ready(function() {
+
+      // fix menu when passed
+      $('.masthead')
+        .visibility({
+          once: false,
+          onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+          },
+          onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+          }
+        })
+      ;
+
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+        .sidebar('attach events', '.toc.item')
+      ;
+
+    })
+  ;
+  </script>
+</body>
+</html>
