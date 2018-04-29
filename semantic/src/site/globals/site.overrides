@@ -11,6 +11,12 @@ h1{
 
 h1.ui.header{ 
   font-family: 'Playfair Display', serif!important;
+  font-weight:900!important;
+  font-size:
+  }
+
+h2.ui.header{ 
+  font-family: 'Playfair Display', serif!important;
   font-weight:900!important;}
 
 
@@ -36,7 +42,7 @@ h1.ui.header{
     -webkit-box-shadow: 0 0 0 2px #f6a015 inset!important;
     box-shadow: 0 0 0 2px #f6a015 inset!important;
     background:transparent!important;
-    background-color:transparen!importantt;
+    background-color:transparen!important;
 }
 
 .ui.inverted.button:hover, .ui.inverted.button:focus,.ui.inverted.button.active, .ui.inverted.button.active:focus {
@@ -52,5 +58,7 @@ h1.ui.header{
 }
 
 .bg-HP{
-  background-image:url('../../assets/images/visuel-HP.jpg')!important;
+  background-image:url('../assets/images/visuel-HP.jpg')!important;
+  -webkit-background-size: cover!important; /* pour anciens Chrome et Safari */
+  background-size: cover!important; /* version standardisée */
 }

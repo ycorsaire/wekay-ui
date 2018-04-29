@@ -3,8 +3,404 @@
 <head>
 <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-  <style type="text/css">
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/assets/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/assets/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <style type="text/css">
+.mt-5{margin-top:5px!important;}
+.mt-10{margin-top:10px!important;}
+.mt-20{margin-top:20px!important;}
+.mt-30{margin-top:30px!important;}
+.mt-40{margin-top:40px!important;}
+.mt-80{margin-top:80px!important;}
+.mt-100{margin-top:100px!important;}
+.mt-120{margin-top:120px!important;}
+.mt-200{margin-top:200px!important;}
+.mb-20{margin-bottom:20px!important;}
+.mb-40{margin-bottom:40px!important;}  
+.pl-5{padding-left:5px;}
+.pl-40{padding-left:40px!important;}
+.pr-40{padding-right:40px!important;}
+.pt-10{padding-top:10px!important;}
+.p-10{padding:10px!important;}
+.p-20{padding:20px!important;}
+.p-30{padding:30px!important;}
+.p-40{padding:40px!important;}
+.p-0{padding:0px!important;}
 
+.bg-blue{background-color:#0099a8!important;}
+.bg-blue-medium{background-color:#076f79!important;}
+.bg-orange-light{ background-color:#ffc871!important;}
+.bg-blue-dark{background-color:#1f3b47!important;}
+.bg-grey{background-color:#f4f4f4;}
+
+.border-orange-light{border-top:40px solid #ffc871!important;}
+
+.center-block{
+  margin-left:auto!important; 
+  margin-right:auto!important;
+  display:block!important;
+}
+.text-uppercase{text-transform:uppercase;}
+.text-italic{font-style:italic;}
+.text-right{text-align:right;}
+.text-center{text-align:center;}
+.text-justify{text-align:justify;}
+.bold{font-weight:bold;}
+.white{color:#FFF!important;}
+.orange-light{ background-color:#ffc871!important;}
+.blue-dark{color:#076f79!important;}
+.blue-medium{color:#076f79!important;}
+.blue-light{color:#0099a8!important;}
+.font-m{font-size:1.2em;}
+.font-l{font-size:30px;}
+.font-xl{font-size:40px;}
+.font-title{
+  font-family: 'Playfair Display', serif!important;
+  font-weight:900!important;
+}
+.logo{
+  float: left;
+  margin-left: 20px;
+}
+
+.meta{height:20px;}
+
+h1{ 
+  font-family: 'Playfair Display', serif!important;
+  font-weight:900!important;}
+
+h1.ui.header{ 
+  font-family: 'Playfair Display', serif!important;
+  font-weight:900!important;
+  font-size:50px!important;
+  }
+
+h2.ui.header{ 
+  font-family: 'Playfair Display', serif!important;
+  font-weight:900!important;
+  font-size:50px!important;
+  margin:0px!important;
+  }
+
+h3.ui.header{ 
+  font-family: 'Playfair Display', serif!important;
+  font-weight:900!important;
+  font-size:50px!important;
+  color:#303030;
+  }
+
+.form.dd-cta-form{
+  background-color:rgba(0, 153, 168, 0.5)!important;
+  padding:10px 10px!important;
+  margin-top:20px;
+}
+
+.ui.secondary.inverted.pointing.menu .item{
+  color:#FFF!important; 
+  font-weight:600;
+}
+
+
+.ui.form .fields{
+  margin: 0!important;
+}
+
+.ui.selection.dropdown{
+  border-radius:0px;
+}
+
+.ui.default.dropdown:not(.button)>.text, .ui.dropdown:not(.button)>.default.text{
+  color:#303030!important;
+}
+
+.ui.primary.button{
+  background-color:#f6a015!important;
+  border:2px solid #f6a015!important;
+}
+
+.ui.primary.button:hover{
+  background-color:#feb53f!important;
+  border:2px solid #feb53f!important;
+  -webkit-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
+}
+
+
+.ui.button{
+  border-radius:0px!important;
+  font-family:'Raleway','Helvetica Neue',Arial,Helvetica, sans-serif!important;
+  font-weight:normal!important;
+  background:#0099a8!important;
+  color:#FFF!important;
+  font-size: 1.2em;
+  font-weight:bold;
+}
+
+.ui.inverted.button{
+    background:transparent!important;
+    -webkit-box-shadow: 0 0 0 2px #0099a8 inset!important;
+    box-shadow: 0 0 0 2px #0099a8 inset!important;
+}
+
+.ui.inverted.primary.button{
+   background:transparent!important;
+    -webkit-box-shadow: 0 0 0 0 transparent inset!important;
+    box-shadow: 0 0 0 0 transparent inset!important;
+    background-color:transparent!important;
+    border:2px solid  #f6a015!important;
+    color:#f6a015!important;
+    font-size: 1.2em;
+    font-weight: bold!important;
+}
+
+.ui.inverted.button:hover, .ui.inverted.button:focus,.ui.inverted.button.active, .ui.inverted.button.active:focus {
+  background: #0099a8!important;
+  -webkit-box-shadow: 0 0 0 2px #0099a8 inset!important;
+  box-shadow: 0px 0px 0px 2px #0099a8 inset !important;
+}
+
+.ui.inverted.primary.button:hover, .ui.inverted.primary.button:focus, .ui.inverted.primary.button.active, .ui.inverted.primary.button.active:focus{
+   -webkit-box-shadow: 0 0 0 0 transparent inset!important;
+    box-shadow: 0 0 0 0 transparent inset!important;
+    background-color:#f6a015!important;
+    border:2px solid  #f6a015!important;
+    color:#FFF!important;
+}
+
+.ui.secondary.inverted.pointing.menu{
+  border:0px!important;
+}
+
+.bg-HP{
+  background-image:url('../assets/images/visuel-pro.png')!important;
+  -webkit-background-size: cover!important; /* pour anciens Chrome et Safari */
+  background-size: cover!important; /* version standardisée */
+  }
+
+  .bg-map{
+    background-image:url('../assets/images/map-HP.jpg')!important;
+    -webkit-background-size: cover!important; /* pour anciens Chrome et Safari */
+    background-size: cover!important; /* version standardisée */
+  }
+
+.arrow{
+    position: absolute;
+    right: 0px;
+    margin-top: 50px;
+  }
+
+
+.label-number{
+  color:white;
+  font-family: 'Playfair Display', serif!important;
+  font-weight:900!important;
+  font-size:36px!important;
+  width:50px;
+  height:50px;
+  border-radius: 50px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10px;
+}
+
+.wrapper-icone{
+  height:140px;
+}
+
+.wrapper-icone img{
+  vertical-align:middle;
+}
+
+.ui.vertical.segment{
+  border-bottom: 0px solid white!important;
+}
+
+.leaf-deco{
+  height:220px;
+  background-image: url('../assets/images/leaf-1.jpg'), url('../assets/images/leaf-2.jpg'); 
+  background-position: bottom right, bottom left;
+  background-repeat: no-repeat; 
+}
+
+.wrapper-testimony{
+  background-image: url('../assets/images/quote-1.png'), url('../assets/images/quote-2.png'); 
+  background-position: top left, bottom right;
+  background-repeat: no-repeat; 
+}
+
+.ui.vertical.stripe p {
+    font-size: 1.2em!important;
+    text-align:justify;
+    }
+
+.date{font-size:14px!important;}
+
+.picture-artisan{
+  background-image:url('../assets/images/exemple-artisan.png')!important;
+  -webkit-background-size: cover!important; /* pour anciens Chrome et Safari */
+  background-size: cover!important; /* version standardisée */
+  height:180px;
+  width:100%;
+}
+
+.picture-artisan-default{
+  Background-color:#0099a8;
+  background-image:url('../assets/images/pro.png')!important;
+  background-position: center center;
+  background-repeat: no-repeat; 
+  opacity:0.75;
+  height:180px;
+  width:100%;
+}
+
+.name{font-size: 1.4em;
+    line-height: 24px;}
+
+.pin-map{
+  background-image: url('../assets/images/pin-white.png'); 
+  background-position: center left;
+  background-repeat: no-repeat; 
+  width:12px;
+  height:18px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.ui.card .meta, .ui.cards>.card .meta, .ui.card>.content>.description, .ui.cards>.card>.content>.description{
+  color: #303030; 
+}
+
+.ui.inverted.link.list a.item{
+  color: #FFF; 
+  line-height:24px;
+}
+
+.ui.form input[type=email]{
+  border-radius:0px!important;
+  width: auto;
+}
+
+.visuel-medium{
+  width: 100%;
+  height:250px;
+}
+
+.visuel-big{
+  width: 100%;
+  height:520px;
+}
+
+.visuel-1{
+  background-image: url('../assets/images/visuel-HP-1.jpg'); 
+  background-position: center center;
+  background-repeat: no-repeat; 
+  -webkit-background-size: cover!important; /* pour anciens Chrome et Safari */
+  background-size: cover!important; /* version standardisée */
+}
+
+.visuel-2{
+  background-image: url('../assets/images/visuel-HP-2.jpg'); 
+  background-position: center center;
+  background-repeat: no-repeat; 
+  -webkit-background-size: cover!important; /* pour anciens Chrome et Safari */
+  background-size: cover!important; /* version standardisée */
+}
+
+.visuel-3{
+  background-image: url('../assets/images/visuel-HP-3.jpg'); 
+  background-position: center center;
+  background-repeat: no-repeat; 
+  -webkit-background-size: cover!important; /* pour anciens Chrome et Safari */
+  background-size: cover!important; /* version standardisée */
+}
+
+.visuel-4{
+  background-image: url('../assets/images/visuel-HP-4.jpg'); 
+  background-position: center center;
+  background-repeat: no-repeat; 
+  -webkit-background-size: cover!important; /* pour anciens Chrome et Safari */
+  background-size: cover!important; /* version standardisée */
+}
+
+.visuel-5{
+  background-image: url('../assets/images/visuel-HP-5.jpg'); 
+  background-position: center center;
+  background-repeat: no-repeat; 
+  -webkit-background-size: cover!important; /* pour anciens Chrome et Safari */
+  background-size: cover!important; /* version standardisée */
+}
+
+.visuel-6{
+  background-image: url('../assets/images/visuel-HP-6.jpg'); 
+  background-position: center center;
+  background-repeat: no-repeat; 
+  -webkit-background-size: cover!important; /* pour anciens Chrome et Safari */
+  background-size: cover!important; /* version standardisée */
+}
+
+.bg-opacity {
+    background-color: rgba(0,0,0,.45);
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    display:none;
+}
+
+.visuel-medium:hover .bg-opacity, .visuel-big:hover .bg-opacity{
+    display:block;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.positioner {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+}
+
+.button-container {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.wrapper-card{
+  background-color:#FFF;
+  text-align:left;
+  /*height:380px;*/
+  border:1px solid #cfcfcf;
+  }
+
+.wrapper-card:hover{
+  -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.ui.large.image{
+  width:100%!important;
+}
     .hidden.menu {
       display: none;
     }
@@ -107,7 +503,11 @@
       .masthead h2 {
         margin-top: 0.5em;
         font-size: 1.5em;
-      }     
+      }   
+      
+      .hidden-sm{
+        display:none!important;
+      }
     }
 
 
@@ -142,7 +542,7 @@
 <div class="pusher">
   <!-- Jumbotron  -->
     <div class="ui inverted vertical masthead center aligned segment jumbotron bg-HP">
-      
+        <a href="#" class="logo"><img src="/assets/images/logo.png" alt="weKay Pro" title="weKay Pro"></a> 
       <div class="ui large inverted pointing secondary menu">
       <a class="toc item">
           <i class="sidebar icon"></i>
@@ -152,15 +552,15 @@
           <a class="item">S'inscrire</a>
           <a class="item" href="/#">Se connecter</a>
           <div class="item">
-            <a class="ui inverted button" role="button" href="/">Vous êtes un particulier</a>
+            <a class="ui button" role="button" href="/">Vous êtes un particulier</a>
           </div>
         </div>
       </div>
-      <div class="ui text container">
-            <h2 class="ui inverted header jumbotron-heading">Trouver de nouveaux chantier en toute simplicité et sans engagement !</h2>
+      <div class="ui text mt-120">
+            <h2 class="ui inverted header jumbotron-heading">Trouver de nouveaux chantier <br>en toute simplicité et sans engagement !</h2>
       </div>
-    <div class="ui text container">
-        <a class="ui primary large button" role="button" href="#">S'inscrire</a>
+    <div class="ui text container mt-20">
+        <a class="ui primary large huge button" role="button" href="#">S'inscrire</a>
     </div>
     </div>
 
@@ -174,91 +574,102 @@
       </div>
       <div class="four column row" style="padding: 5em 0em;">
         <div class="center aligned column">
-          <i aria-hidden="true" class="laptop massive icon"></i>
+          <div class="arrow hidden-sm"><img src="/assets/images/big-arrow.png" alt="Suivant" title="Suivant"></div>
+          <div class="wrapper-icone"><img src="/assets/images/icone-pro-1.png" class="mt-10" alt="Inscription" title="Inscription"></div>
           <p style="padding-top: 1em;">
-            <div class="ui orange huge circular label">1</div>
+            <div class="ui orange-light huge circular label-number">1</div>
           </p>
-          <p style="font-size: 1.2em; padding: 0em 1.5em;">Tout d'abord, décrivez nous votre projet</p>
+          <p style="font-size: 1.2em; padding: 0em 1.5em;">Inscrivez-vous et <br>complétez votre profil ! </p>
         </div>
         <div class="center aligned column">
-          <i aria-hidden="true" class="sticky note outline massive icon"></i>
+          <div class="arrow hidden-sm"><img src="/assets/images/big-arrow.png" alt="Suivant" title="Suivant"></div>
+          <div class="wrapper-icone"><img src="/assets/images/icone-pro-2.png" class="mt-10" alt="consulter les chantier" title="consulter les chantier"></div>
           <p style="padding-top: 1em;">
-            <div class="ui orange huge circular label">2</div>
+            <div class="ui orange-light huge circular label-number">2</div>
           </p>
-          <p style="font-size: 1.2em; padding: 0em 1.5em;">Faites votre choix parmi les devis que vous recevrez</p>
+          <p style="font-size: 1.2em; padding: 0em 1.5em;">Consultez les chantiers et <br> répondez aux demandes de devis</p>
         </div>
         <div class="center aligned column">
-          <i aria-hidden="true" class="payment massive icon"></i>
+          <div class="arrow hidden-sm"><img src="/assets/images/big-arrow.png" alt="Suivant" title="Suivant"></div>
+          <div class="wrapper-icone"><img src="/assets/images/icone-pro-3.png" class="mt-10" alt="réalisation des travaux" title="consulter des chantier"></div>
           <p style="padding-top: 1em;">
-            <div class="ui orange huge circular label">3</div>
+            <div class="ui orange-light huge circular label-number">3</div>
           </p>
-          <p style="font-size: 1.2em; padding: 0em 1.5em;">Avec WeKay, payez vos travaux de manière sécurisée !</p>
+          <p style="font-size: 1.2em; padding: 0em 1.5em;">Signez et <br>réalisez les travaux !</p>
         </div>
         <div class="center aligned column">
-          <i aria-hidden="true" class="home massive icon"></i>
+          <div class="wrapper-icone"><img src="/assets/images/icone-pro-4.png" class="mt-10" alt="Augmentation des revenus" title="Augmentation des revenus"></div>
           <p style="padding-top: 1em;">
-            <div class="ui orange huge circular label">4</div>
+            <div class="ui orange-light huge circular label-number">4</div>
           </p>
-          <p style="font-size: 1.2em; padding: 0em 1.5em;">Et voilà, votre projet peut commencer !</p>
+          <p style="font-size: 1.2em; padding: 0em 1.5em;">Vous êtes payés via WeKay et <br>vous augmentez vos revenus </p>
         </div>
       </div>
       <div class="row">
         <div class="center aligned column">
-          <button class="ui primary huge basic button" role="button">En savoir plus</button>
+          <button class="ui inverted primary button" role="button">En savoir plus</button>
         </div>
       </div>
     </div>
   </div>
 
 <!-- Reassurance -->
-<div class="ui vertical stripe segment">
+<div class="ui vertical segment">
     <div class="ui middle aligned stackable grid">
-        <div class="row">
-            <div class="ten wide column">
-                
+        <div class="row bg-blue-medium p-0">
+            <div class="ten wide column pl-40 white bold font-xl">
                 <p>Mise en relation gratuite avec les clients.</p>
-                
                 <p>Moins de prospection, plus de revenus.</p>
             </div>
             <div class="six wide right floated column">
-                <img src="/assets/images/image_2.png" class="ui large bordered rounded image">
+                <img src="/assets/images/visuel-pro-1.jpg" class="ui large image" alt="professionnel du bois" title="professionnel du bois">
             </div>
         </div>
     </div>
 </div>
-<div class="ui vertical stripe segment">
+<div class="ui vertical segment">
     <div class="ui middle aligned stackable grid">
-        <div class="row">
+        <div class="row p-0">
             <div class="six wide right floated column">
-                <img src="/assets/images/image_2.png" class="ui large bordered rounded image">
+                <img src="/assets/images/visuel-pro-2.jpg" class="ui large image" alt="professionnel de la rénovation" title="professionnel de la rénovation">
             </div>
-            <div class="ten wide column">
-
+            <div class="ten wide column pr-40 text-right bold font-xl blue-medium">
                 <p>Contractualisation en ligne sur WeKay</p>
-
                 <p>Devis et factures automatisées</p>
             </div>
         </div>
     </div>
 </div>
-
+<div class="ui vertical segment">
+    <div class="ui middle aligned stackable grid">
+        <div class="row bg-blue-medium p-0">
+            <div class="ten wide column pl-40 white bold font-xl">
+                <p>Des chantiers localisés aux Caraibe</p>
+                <p>Des recommandations au service de votre réputation et de vos revenus</p>
+            </div>
+            <div class="six wide right floated column">
+                <img src="/assets/images/visuel-pro-3.jpg" class="ui large image" alt="professionnel qualifiés" title="professionnel qualifiés">
+            </div>
+        </div>
+    </div>
+</div>
 <!--App-->
 <div class="ui vertical segment">
-    <div class="ui stackable grid">
+    <div class="ui stackable grid bg-grey">
         <div class="row">
             <div class="column">
-                <h3 class="ui center aligned header" style="font-size: 3em;">Une application simple d'utilisation à votre service</h3>
+                <h3 class="ui center aligned header mt-40" style="font-size: 3em;">Une application simple d'utilisation à votre service</h3>
             </div>
         </div>
-        <div class="one column row">
+        <div class="one column row mt-20">
             <div class="center aligned column">
-                <img src="/assets/images/image_2.png" class="ui image" style="margin-left:auto;margin-right:auto;">
+                <img src="/assets/images/laptop.png" class="ui image" style="margin-left:auto;margin-right:auto;" alt="une application simple d'utilisation" title="une application simple d'utilisation">
             </div>
 
         </div>
         <div class="row">
             <div class="center aligned column">
-                <button class="ui orange huge basic button" role="button">S'inscrire</button>
+                <button class="ui primary button mb-40" role="button">S'inscrire</button>
             </div>
         </div>
     </div>
@@ -268,87 +679,84 @@
 <div class="ui vertical stripe segment">
     <div class="ui middle aligned stackable grid container">
         <div class="row">
-            <div class="column">
-                <h3 class="ui center aligned header" style="font-size: 3em;">Ils nous font déjà confiance!</h3>
-            </div>
+          <div class="column">
+            <h3 class="ui center aligned header" style="font-size: 3em;">L’expérience des professionnels sur WeKay</h3>
+          </div>
         </div>
-        <div class="row">
-            <div class="six wide right floated column">
-                <img src="/assets/images/image_2.png" class="ui large bordered rounded image">
-            </div>
-            <div class="eight wide column">
-
-                <p>Merci pour votre service!</p>
-
-                <p>Je suis passée par WeKay pour trouver un professionnel afin de rénover un appartement. Facile et simple d'utilisation,
-                    j'ai été contacté rapidement. J'ai alors pu comparer les différents devis. Le mode de paiement m'a particulièrement
-                    plu car il offre une sécurité non négligeable en cas de travaux baclés.
-                </p>
-            </div>
+      <div class="row mt-20">
+        <div class="three wide right floated column">
+          <img src="/assets/images/testimony-2.png" class="ui large rounded image">
+          <div class="text-center bold mt-10">M. MARTIAL</div>
+          <div class="text-center">Guadeloupe</div>
         </div>
-    </div>
-</div>
-
-<!--Article-->
-
-
-<!-- FOOTER-->
-  <div class="ui inverted vertical segment">
-    <div class="ui container">
-      <div class="ui stackable grid">
-        <div class="four column row">
-          <div class="column">
-            <h4 class="ui inverted header">Vous êtes un particulier ?</h4>
-            <div role="list" class="ui inverted link list">
-              <a role="listitem" class="item">Demander un devis</a>
-              <a role="listitem" class="item">Trouver un professionnel</a>
-              <a role="listitem" class="item">Comment ça marche ?</a>
-              <a role="listitem" class="item">Nos émissions et conseils</a>
-              <a role="listitem" class="item">Se Connecter</a>
-              <a role="listitem" class="item">Mentions légales &amp; CGV</a>
-              <a role="listitem" class="item">Nous contacter</a>
-            </div>
-          </div>
-          <div class="column">
-            <h4 class="ui inverted header">Vous êtes un professionnel ?</h4>
-            <div role="list" class="ui inverted link list">
-              <a role="listitem" class="item">Comment ça marche ?</a>
-              <a role="listitem" class="item">S'inscrire</a>
-              <a role="listitem" class="item">Se Connecter</a>
-              <a role="listitem" class="item">Mentions légales &amp; CGV</a>
-              <a role="listitem" class="item">Nous contacter</a>
-            </div>
-          </div>
-          <div class="column">
-            <h4 class="ui inverted header">Abonnez-vous à notre newsletter :</h4>
-            <p>Découvrez nos conseils et dernières nouveautés en vous inscrivant à notre newsletter.</p>
-            <form class="ui form">
-              <div class="ui action input newsletter">
-                <input type="email" placeholder="Votre email">
-                <button class="ui primary button" role="button">Ok</button>
-              </div>
-            </form>
-          </div>
-          <div class="column">
-            <h4 class="ui inverted header">Suivez nous :</h4>
-            <div>
-              <button class="ui facebook icon button" role="button">
-                <i aria-hidden="true" class="facebook icon"></i>
-              </button>
-              <button class="ui twitter icon button" role="button">
-                <i aria-hidden="true" class="twitter icon"></i>
-              </button>
-              <button class="ui linkedin icon button" role="button">
-                <i aria-hidden="true" class="linkedin icon"></i>
-              </button>
-              <button class="ui google plus icon button" role="button">
-                <i aria-hidden="true" class="google plus icon"></i>
-              </button>
+        <div class="one wide right floated column" style="padding-right: 0rem;">
+            <img src="/assets/images/tick-testimony.png" class="ui large image">
+        </div>
+        <div class="eleven wide column bg-orange-light p-20">
+          <div class="wrapper-testimony">
+            <div class="date text-right">Martinique, le 2 Janvier 2018</div>
+            <div class="text-italic p-30">
+              <p>WeKay m’a permis de développer ma clientèle. J’ai augmenté mon chiffre d’affaire en développant ma visibilité et ma réputation. Mon profil sur WeKay est devenu ma nouvelle carte de visite.
+              <br>
+              J’apprécie de plus les services offerts par la plateforme : réalisation simple de devis et de factures, suivi de l’avancement des travaux, du devis au paiement via WeKay.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>  
+
+<!-- FOOTER-->
+  <!-- FOOTER-->
+  <div class="ui inverted vertical segment bg-blue-dark">
+      <div class="ui container">
+        <div class="ui stackable grid">
+          <div class="four column row">
+            <div class="column mt-20">
+              <h4 class="ui inverted header">Vous êtes un particulier ?</h4>
+              <div role="list" class="ui inverted link list">
+                <a role="listitem" class="item">Demander un devis</a>
+                <a role="listitem" class="item">Trouver un professionnel</a>
+                <a role="listitem" class="item">Comment ça marche ?</a>
+                <a role="listitem" class="item">Nos émissions et conseils</a>
+                <a role="listitem" class="item">Se Connecter</a>
+                <a role="listitem" class="item">Mentions légales &amp; CGV</a>
+                <a role="listitem" class="item">Nous contacter</a>
+              </div>
+            </div>
+            <div class="column mt-20">
+              <h4 class="ui inverted header">Vous êtes un professionnel ?</h4>
+              <div role="list" class="ui inverted link list">
+                <a role="listitem" class="item">Comment ça marche ?</a>
+                <a role="listitem" class="item">S'inscrire</a>
+                <a role="listitem" class="item">Se Connecter</a>
+                <a role="listitem" class="item">Mentions légales &amp; CGV</a>
+                <a role="listitem" class="item">Nous contacter</a>
+              </div>
+            </div>
+            <div class="column mt-20">
+              <h4 class="ui inverted header">Abonnez-vous à notre newsletter :</h4>
+              <p>Découvrez nos conseils et dernières nouveautés en vous inscrivant à notre newsletter.</p>
+              <form class="ui form">
+                <div class="ui action input newsletter">
+                  <input type="email" placeholder="Votre email">
+                  <button class="ui primary button p-10" role="button">OK</button>
+                </div>
+              </form>
+            </div>
+            <div class="column mt-20">
+              <h4 class="ui inverted header">Suivez nous :</h4>
+              <div>
+                  <a href=""><img src="/assets/images/facebook.jpg" class="" alt="facebook" title="facebook"></a>
+                  <a href=""><img src="/assets/images/youtube.jpg" class="pl-5" alt="you tube" title="you tube"></a>
+                  <a href=""><img src="/assets/images/twitter.jpg" class="pl-5" alt="twitter" title="twitter"></a>
+                  <a href=""><img src="/assets/images/google.jpg" class="pl-5" alt="google plus" title="google plus"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 </div>
 
