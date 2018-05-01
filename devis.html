@@ -23,7 +23,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
   <style type="text/css">
-      
 .mt-5{margin-top:5px!important;}
 .mt-10{margin-top:10px!important;}
 .mt-20{margin-top:20px!important;}
@@ -31,19 +30,25 @@
 .mt-40{margin-top:40px!important;}
 .mt-80{margin-top:80px!important;}
 .mt-100{margin-top:100px!important;}
+.mt-120{margin-top:120px!important;}
 .mt-200{margin-top:200px!important;}
 .mb-20{margin-bottom:20px!important;}
 .mb-40{margin-bottom:40px!important;}  
 .pl-5{padding-left:5px;}
+.pl-40{padding-left:40px!important;}
+.pr-40{padding-right:40px!important;}
 .pt-10{padding-top:10px!important;}
 .p-10{padding:10px!important;}
 .p-20{padding:20px!important;}
 .p-30{padding:30px!important;}
 .p-40{padding:40px!important;}
+.p-0{padding:0px!important;}
 
+.bg-blue{background-color:#0099a8!important;}
 .bg-blue-medium{background-color:#076f79!important;}
 .bg-orange-light{ background-color:#ffc871!important;}
 .bg-blue-dark{background-color:#1f3b47!important;}
+.bg-grey{background-color:#f4f4f4;}
 
 .border-orange-light{border-top:40px solid #ffc871!important;}
 
@@ -61,13 +66,17 @@
 .white{color:#FFF!important;}
 .orange-light{ background-color:#ffc871!important;}
 .blue-dark{color:#076f79!important;}
+.blue-medium{color:#076f79!important;}
 .blue-light{color:#0099a8!important;}
 .font-m{font-size:1.2em;}
 .font-l{font-size:30px;}
+.font-xl{font-size:40px;}
 .font-title{
   font-family: 'Playfair Display', serif!important;
   font-weight:900!important;
 }
+
+.float-right{float:right;}
 .logo{
   float: left;
   margin-left: 20px;
@@ -150,6 +159,7 @@ h3.ui.header{
     background:transparent!important;
     -webkit-box-shadow: 0 0 0 2px #0099a8 inset!important;
     box-shadow: 0 0 0 2px #0099a8 inset!important;
+    color:#0099a8 !important;
 }
 
 .ui.inverted.primary.button{
@@ -167,6 +177,7 @@ h3.ui.header{
   background: #0099a8!important;
   -webkit-box-shadow: 0 0 0 2px #0099a8 inset!important;
   box-shadow: 0px 0px 0px 2px #0099a8 inset !important;
+  color:#FFF !important;
 }
 
 .ui.inverted.primary.button:hover, .ui.inverted.primary.button:focus, .ui.inverted.primary.button.active, .ui.inverted.primary.button.active:focus{
@@ -177,13 +188,309 @@ h3.ui.header{
     color:#FFF!important;
 }
 
+.btn-icon{
+  border:3px solid #0099a8;
+  width:170px;
+  height:170px;
+  padding :10px;
+  text-align:center;
+  font-size: 14px!important;
+  margin-right: auto;
+  margin-left: auto;
+  color:#0099a8;
+}
+
+.btn-icon.select, .btn-icon:hover{
+  border:3px solid #f6a015!important;
+  background-color:#f6a015!important;
+  color:#FFF;
+}
+
+/******icone********************/
+
+.icon-1{
+  display: inline-block;
+  background-image:url('../assets/images/icone-category/category/icone-1.png')!important;
+  background-position: center center;
+  background-repeat:no-repeat;
+  height:86px;
+  width:100px;
+}
+
+.icon-1.select, .btn-icon:hover .icon-1{
+  display: inline-block;
+  background-image:url('../assets/images/icone-category/category/hover/icone-1.png')!important;
+  background-position: center center;
+  background-repeat:no-repeat;
+  height:86px;
+  width:100px;
+}
+
+.icon-2{
+  display: inline-block;
+  background-image:url('../assets/images/icone-category/category/icone-2.png')!important;
+  background-position: center center;
+  background-repeat:no-repeat;
+  height:86px;
+  width:100px;
+}
+
+.icon-2.select, .btn-icon:hover .icon-2{
+  display: inline-block;
+  background-image:url('../assets/images/icone-category/category/hover/icone-2.png')!important;
+  background-position: center center;
+  background-repeat:no-repeat;
+  height:86px;
+  width:100px;
+}
+
+.icon-3{
+  display: inline-block;
+  background-image:url('../assets/images/icone-category/category/icone-3.png')!important;
+  background-position: center center;
+  background-repeat:no-repeat;
+  height:86px;
+  width:100px;
+}
+
+.icon-3.select, .btn-icon:hover .icon-3{
+  display: inline-block;
+  background-image:url('../assets/images/icone-category/category/hover/icone-3.png')!important;
+  background-position: center center;
+  background-repeat:no-repeat;
+  height:86px;
+  width:100px;
+}
+
+.icon-4{
+  display: inline-block;
+  background-image:url('../assets/images/icone-category/category/icone-4.png')!important;
+  background-position: center center;
+  background-repeat:no-repeat;
+  height:86px;
+  width:100px;
+}
+
+.icon-4.select, .btn-icon:hover .icon-4{
+  display: inline-block;
+  background-image:url('../assets/images/icone-category/category/hover/icone-4.png')!important;
+  background-position: center center;
+  background-repeat:no-repeat;
+  height:86px;
+  width:100px;
+}
+
+.icon-5{
+  display: inline-block;
+  background-image:url('../assets/images/icone-category/category/icone-5.png')!important;
+  background-position: center center;
+  background-repeat:no-repeat;
+  height:86px;
+  width:100px;
+}
+
+.icon-5.select, .btn-icon:hover .icon-5{
+  display: inline-block;
+  background-image:url('../assets/images/icone-category/category/hover/icone-5.png')!important;
+  background-position: center center;
+  background-repeat:no-repeat;
+  height:86px;
+  width:100px;
+}
+
+.icon-6{
+  display: inline-block;
+  background-image:url('../assets/images/icone-category/category/icone-6.png')!important;
+  background-position: center center;
+  background-repeat:no-repeat;
+  height:86px;
+  width:100px;
+}
+
+.icon-6.select, .btn-icon:hover .icon-6{
+  display: inline-block;
+  background-image:url('../assets/images/icone-category/category/hover/icone-6.png')!important;
+  background-position: center center;
+  background-repeat:no-repeat;
+  height:86px;
+  width:100px;
+}
+
+.icon-7{
+  display: inline-block;
+  background-image:url('../assets/images/icone-category/category/icone-7.png')!important;
+  background-position: center center;
+  background-repeat:no-repeat;
+  height:86px;
+  width:100px;
+}
+
+.icon-7.select, .btn-icon:hover .icon-7{
+  display: inline-block;
+  background-image:url('../assets/images/icone-category/category/hover/icone-7.png')!important;
+  background-position: center center;
+  background-repeat:no-repeat;
+  height:86px;
+  width:100px;
+}
+
+/***********************maçonnerie-toiture********************/
+
+.icon-8{
+  display: inline-block;
+  background-image:url('../assets/images/icone-category/maconnerie-toiture/icone-1.png')!important;
+  background-position: center center;
+  background-repeat:no-repeat;
+  height:86px;
+  width:100px;
+}
+
+.icon-8.select, .btn-icon:hover .icon-8{
+  display: inline-block;
+  background-image:url('../assets/images/icone-category/maconnerie-toiture/hover/icone-1.png')!important;
+  background-position: center center;
+  background-repeat:no-repeat;
+  height:86px;
+  width:100px;
+}
+
+
+.icon-9{
+  display: inline-block;
+  background-image:url('../assets/images/icone-category/maconnerie-toiture/icone-2.png')!important;
+  background-position: center center;
+  background-repeat:no-repeat;
+  height:86px;
+  width:100px;
+}
+
+.icon-9.select, .btn-icon:hover .icon-9{
+  display: inline-block;
+  background-image:url('../assets/images/icone-category/maconnerie-toiture/hover/icone-2.png')!important;
+  background-position: center center;
+  background-repeat:no-repeat;
+  height:86px;
+  width:100px;
+}
+
+.icon-10{
+  display: inline-block;
+  background-image:url('../assets/images/icone-category/maconnerie-toiture/icone-3.png')!important;
+  background-position: center center;
+  background-repeat:no-repeat;
+  height:86px;
+  width:100px;
+}
+
+.icon-10.select, .btn-icon:hover .icon-10{
+  display: inline-block;
+  background-image:url('../assets/images/icone-category/maconnerie-toiture/hover/icone-3.png')!important;
+  background-position: center center;
+  background-repeat:no-repeat;
+  height:86px;
+  width:100px;
+}
+
+.icon-11{
+  display: inline-block;
+  background-image:url('../assets/images/icone-category/maconnerie-toiture/icone-4.png')!important;
+  background-position: center center;
+  background-repeat:no-repeat;
+  height:86px;
+  width:100px;
+}
+
+.icon-11.select, .btn-icon:hover .icon-11{
+  display: inline-block;
+  background-image:url('../assets/images/icone-category/maconnerie-toiture/hover/icone-4.png')!important;
+  background-position: center center;
+  background-repeat:no-repeat;
+  height:86px;
+  width:100px;
+}
+
+/********************fin icone**************************/
+
+.ui label{
+  font-size:1.3em!important;
+  color:#0099a8!important;
+  font-weight:bold;
+}
+
+.field-radio{
+  border: 1px solid #0099a8;
+  padding:15px!important;
+}
+
+.ui.form .fields>.field-radio.select{
+  border: 1px solid #f6a015;
+  padding:15px!important;
+  background-color: #f6a015;;
+}
+
+.ui.form .fields>.field-radio.select label{
+  color:#FFF!important;
+}
+
+.ui[class*="left icon"].input>input{
+  padding-left:10px!important;
+}
+
+textarea{
+  border: 1px solid #0099a8!important;
+  border-radius:0px!important;
+}
+
+input{
+  border: 1px solid #0099a8!important;
+  border-radius:0px!important;
+}
+
+.user-icon{
+  display: inline-block;
+  background-image:url('../assets/images/icon-form-1.jpg')!important;
+  background-position: center left;
+  background-repeat:no-repeat;
+  height:55px;
+  width:55px;
+}
+
+.icon-map{
+  display: inline-block;
+  background-image:url('../assets/images/icon-form-2.jpg')!important;
+  background-position: center left;
+  background-repeat:no-repeat;
+  height:55px;
+  width:55px;
+}
+
+.icon-mail{
+  display: inline-block;
+  background-image:url('../assets/images/icon-form-3.jpg')!important;
+  background-position: center left;
+  background-repeat:no-repeat;
+  height:55px;
+  width:55px;
+}
+
+.icon-phone{
+  display: inline-block;
+  background-image:url('../assets/images/icon-form-4.jpg')!important;
+  background-position: center left;
+  background-repeat:no-repeat;
+  height:55px;
+  width:55px;
+}
+
+
+
 .bg-HP{
   background-image:url('../assets/images/visuel-HP.jpg')!important;
   -webkit-background-size: cover!important; /* pour anciens Chrome et Safari */
   background-size: cover!important; /* version standardisée */
   }
 
-  .bg-map{
+.bg-map{
     background-image:url('../assets/images/map-HP.jpg')!important;
     -webkit-background-size: cover!important; /* pour anciens Chrome et Safari */
     background-size: cover!important; /* version standardisée */
@@ -203,14 +510,14 @@ h3.ui.header{
   color:white;
   font-family: 'Playfair Display', serif!important;
   font-weight:900!important;
-  font-size:36px!important;
-  width:50px;
-  height:50px;
+  font-size:30px!important;
+  width:45px;
+  height:45px;
   border-radius: 50px;
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 10px;
+  text-align: center;
+  margin-right: 10px;
+  margin-left: auto;
+  float:left;
 }
 
 .wrapper-icone{
@@ -494,151 +801,213 @@ h3.ui.header{
 
 </head>
 <body>
-    <div class="ui container">
-        <h3>Dans quel domaine souhaitez-réaliser des travaux ?</h3>
-        <div class="ui small images">
-                <img src="/assets/images/image_2.png">
-
-                <img src="/assets/images/image_2.png">
-
-                <img src="/assets/images/image_2.png">
-
-                <img src="/assets/images/image_2.png">
-        </div>
-        <div class="ui small images container">
-                <img src="/assets/images/image_2.png">
-
-                <img src="/assets/images/image_2.png">
-
-                <img src="/assets/images/image_2.png">
-
-                <img src="/assets/images/image_2.png">
-        </div>
-        <h3>Quelle nature de travaux intérieur souhaitez vous réaliser ?</h3>
-        <div class="ui small images">
-                <img src="/assets/images/image_2.png">
-
-                <img src="/assets/images/image_2.png">
-
-                <img src="/assets/images/image_2.png">
-
-                <img src="/assets/images/image_2.png">
-        </div>
-        <div class="ui small images container">
-                <img src="/assets/images/image_2.png">
-
-                <img src="/assets/images/image_2.png">
-
-                <img src="/assets/images/image_2.png">
-
-                <img src="/assets/images/image_2.png">
-        </div>
-        <h3>Vous souhaitez réaliser votre projet :</h3>
-        <div class="ui form">
-          
-            <div class="grouped fields">
-              <div class="field">
-                <div class="ui radio checkbox">
-                  <input type="radio" name="begin" checked="" tabindex="0" class="hidden">
-                  <label>Dès que possible</label>
-                </div>
-              </div>
-              <div class="field">
-                <div class="ui radio checkbox">
-                  <input type="radio" name="begin" tabindex="0" class="hidden">
-                  <label>Dans 1 ou 2 mois</label>
-                </div>
-              </div>
-              <div class="field">
-                <div class="ui radio checkbox">
-                  <input type="radio" name="begin" tabindex="0" class="hidden">
-                  <label>Dans 6 mois</label>
-                </div>
-              </div>
-              <div class="field">
-                <div class="ui radio checkbox">
-                  <input type="radio" name="begin" tabindex="0" class="hidden">
-                  <label>Au moins dans un an</label>
-                </div>
-              </div>
-              <div class="field">
-                  <div class="ui radio checkbox">
-                    <input type="radio" name="begin" tabindex="0" class="hidden">
-                    <label>Vous souhaitez juste vous renseigner sur les tarifs</label>
+    <div class="ui container mt-100">
+        <h3 class="blue-light font-l font-title"> <div class="ui bg-blue huge circular label-number">1</div> Dans quel domaine souhaitez-réaliser des travaux ?</h3>
+          <div class="ui stackable grid mt-80">
+              <div class="four column row" style="padding:0em;">
+                <div class="center aligned column">
+                  <div class="btn-icon">
+                    <span class="icon-1"></span>
+                    <div class="text-uppercase text-center bold mt-10">construction / rénovation</div>
                   </div>
-                </div>              
-            </div>
-          </div>        
-        <h3>Décrivez-nous en quelques mots votre projet : </h3>
-        <div class="ui form">
-            <div class="field">
-              <textarea placeholder="Détaillez votre projet, par exemple
-               Je souhaite refaire entièrement ma salle de bain (carrelage, peinture, douche et lavabo). Elle mesure 6 mètres
-               carré. "></textarea>
-            </div>
-
+                </div>
+                <div class="center aligned column">
+                  <div class="btn-icon">
+                      <span class="icon-2"></span>
+                      <div class="text-uppercase text-center bold mt-10">énergies renouvelables</div>
+                  </div>
+                </div>
+                <div class="center aligned column">
+                    <div class="btn-icon select">
+                        <span class="icon-3 select"></span>
+                        <div class="text-uppercase text-center bold mt-10">maçonnerie / toiture</div>
+                    </div>
+                </div>
+                <div class="center aligned column">
+                    <div class="btn-icon">
+                        <span class="icon-4"></span>
+                        <div class="text-uppercase text-center bold mt-10">Intérieur</div>
+                    </div>
+                </div>
+              </div>
           </div>
-        <h3>Si vous avez des photos du lieu où le professionnel doit intervenir
-            ou qui peuvent faciliter la réalisation, transmettez-les nous!
-        </h3>
-        <h3>
-            Dernière étape, complétez vos coordonnées :
-        </h3>
-        <form class="ui form">
-          <div class="field">
-              <div class="two fields">   
-                  <div class="field">
-                      <div class="ui left icon input">
-                          <input type="text" placeholder="Votre prénom" name="firstName" value="">
-                          <i aria-hidden="true" class="user icon"></i>
-                      </div>
+          <div class="ui stackable grid mt-40">
+            <div class="four column row" style="padding:0em;">
+              <div class="center aligned column">
+                <div class="btn-icon">
+                  <span class="icon-5"></span>
+                  <div class="text-uppercase text-center bold mt-10">maçonnerie  /  toiture</div>
+                </div>
+              </div>
+              <div class="center aligned column">
+                <div class="btn-icon">
+                    <span class="icon-6"></span>
+                    <div class="text-uppercase text-center bold mt-10">menuiserie /  serrurerie</div>
+                </div>
+              </div>
+              <div class="center aligned column">
+                  <div class="btn-icon">
+                      <span class="icon-7"></span>
+                      <div class="text-uppercase text-center bold mt-10">plomberie  /  climatisation</div>
                   </div>
-                  <div class="field">
-                      <div class="ui left icon input">
-                          <input type="text" placeholder="Votre nom" name="lastName" value="">
-                          <i aria-hidden="true" class="user icon"></i>
-                      </div>
-                  </div>
-              </div> 
+              </div>
+              <div class="center aligned column"></div>
+            </div>
           </div>
-            <div class="field">
-                <div class="two fields">
-                    <div class="field">
-                        <div class="ui left icon input">
-                            <input type="text" placeholder="Votre code postal" name="zipCode" value="">
-                            <i aria-hidden="true" class="zip icon"></i>
-                        </div>
+          <h3 class="blue-light font-l font-title  mt-100"><div class="ui bg-blue huge circular label-number">2</div> Quelle nature de travaux intérieur souhaitez vous réaliser ?</h3>
+          <div class="ui container center aligned">
+            <div class="ui stackable grid mt-80">
+              <div class="four column row" style="padding:0em;">
+                  <div class="center aligned column">
+                    <div class="btn-icon select">
+                      <span class="icon-8 select"></span>
+                      <div class="text-uppercase text-center bold mt-10">Dallage et pavé                        </div>
                     </div>
-                    <div class="field">
-                        <div class="ui left icon input">
-                            <input type="text" placeholder="Votre ville" name="ville" value="">
-                            <i aria-hidden="true" class="suitcase icon"></i>
-                        </div>
+                  </div>
+                  <div class="center aligned column">
+                    <div class="btn-icon">
+                        <span class="icon-9"></span>
+                        <div class="text-uppercase text-center bold mt-10">Maçonnerie</div>
                     </div>
-                </div>
-            </div>
-
-            <div class="field">
-                <div class="two fields">
-                  <div class="field">
-                      <div class="ui left icon input">
-                          <input type="text" placeholder="Votre email" name="email" value="">
-                          <i aria-hidden="true" class="mail icon"></i>
+                  </div>
+                  <div class="center aligned column">
+                      <div class="btn-icon">
+                          <span class="icon-10"></span>
+                          <div class="text-uppercase text-center bold mt-10">Toiture</div>
                       </div>
                   </div>
-                    <div class="field">
-                        <div class="ui left icon input">
-                            <input type="text" placeholder="Votre numéro de téléphone" name="phoneNumber" value="">
-                            <i aria-hidden="true" class="phone icon"></i>
-                        </div>
-                    </div>
-                    
+                  <div class="center aligned column">
+                      <div class="btn-icon">
+                          <span class="icon-11"></span>
+                          <div class="text-uppercase text-center bold mt-10">Ravalement façade</div>
+                      </div>
+                  </div>
                 </div>
             </div>
-            <div class="ui primary button" role="button">Validez votre projet</div>
-        </form>
-                           
-    </div>
+        </div>
+          <h3 class="blue-light font-l font-title  mt-100"><div class="ui bg-blue huge circular label-number">3</div> Vous souhaitez réaliser votre projet :</h3>
+          <div class="ui container center">
+            <div class="ui form mt-80">
+                <div class="grouped fields">
+                  <div class="field field-radio select">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="begin" checked="" tabindex="0" class="hidden">
+                      <label>Dès que possible</label>
+                    </div>
+                  </div>
+                  <div class="field field-radio">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="begin" tabindex="0" class="hidden">
+                      <label>Dans 1 ou 2 mois</label>
+                    </div>
+                  </div>
+                  <div class="field field-radio">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="begin" tabindex="0" class="hidden">
+                      <label>Dans 6 mois</label>
+                    </div>
+                  </div>
+                  <div class="field field-radio">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="begin" tabindex="0" class="hidden">
+                      <label>Au moins dans un an</label>
+                    </div>
+                  </div>
+                  <div class="field field-radio">
+                      <div class="ui radio checkbox">
+                        <input type="radio" name="begin" tabindex="0" class="hidden">
+                        <label>Vous souhaitez juste vous renseigner sur les tarifs</label>
+                      </div>
+                    </div>              
+                </div>
+              </div>  
+          </div>      
+          <h3 class="blue-light font-l font-title  mt-100"><div class="ui bg-blue huge circular label-number">4</div>Décrivez-nous en quelques mots votre projet : </h3>
+          <div class="ui container center aligned">
+            <div class="ui form mt-80">
+                <div class="field">
+                  <textarea placeholder="Détaillez votre projet, par exemple : Je souhaite refaire entièrement ma salle de bain (carrelage, peinture, douche et lavabo). Elle mesure 6 mètres carré."></textarea>
+                </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="center aligned column mt-40">
+                <button class="ui primary button center-block" role="button">Enregistrer</button>
+              </div>
+          </div>
+          <h3 class="blue-light font-l font-title  mt-100"><div class="ui bg-blue huge circular label-number">5</div>Si vous avez des photos du lieu où le professionnel doit intervenir
+              ou qui peuvent faciliter la réalisation, transmettez-les nous!
+          </h3>
+          <div class="row">
+              <div class="center aligned column float-right">
+                <button class="ui inverted button" role="button">Passer à l'étape suivante</button>
+              </div>
+          </div>
+
+
+          <h3 class="blue-light font-l font-title  mt-100">
+              <div class="ui bg-blue huge circular label-number">6</div>Dernière étape, complétez vos coordonnées :
+          </h3>
+          <div class="ui container center aligned">
+            <form class="ui form mt-80">
+              <div class="field">
+                  <div class="two fields">   
+                      <div class="field">
+                          <div class="ui left icon input">
+                              <i aria-hidden="true" class="user-icon"></i>
+                              <input type="text" placeholder="Votre prénom" name="firstName" value="">
+                          </div>
+                      </div>
+                      <div class="field">
+                          <div class="ui left icon input">
+                              <i aria-hidden="true" class="user-icon"></i>
+                              <input type="text" placeholder="Votre nom" name="lastName" value="">
+                          </div>
+                      </div>
+                  </div> 
+              </div>
+                <div class="field">
+                    <div class="two fields">
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i aria-hidden="true" class="icon-map"></i>
+                                <input type="text" placeholder="Votre code postal" name="zipCode" value="">
+                                
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i aria-hidden="true" class="icon-map"></i>
+                                <input type="text" placeholder="Votre ville" name="ville" value="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="two fields">
+                      <div class="field">
+                          <div class="ui left icon input">
+                              <i aria-hidden="true" class="icon-mail"></i>
+                              <input type="text" placeholder="Votre email" name="email" value="">
+                              
+                          </div>
+                      </div>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i aria-hidden="true" class="icon-phone"></i>
+                                <input type="text" placeholder="Votre numéro de téléphone" name="phoneNumber" value="">
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="ui primary huge button mt-40 mb-40" role="button">Validez votre projet</div>
+            </form>
+          </div>
+        </div>              
+      </div>
     
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"

@@ -13,6 +13,7 @@
              Page
 *******************************/
 
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin');
 html,
 body {
   height: 100%;
@@ -199,3 +200,60 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 
 /******HP particulier*****/
 
+h1 {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 900!important;
+}
+h1.ui.header {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 900!important;
+}
+h2.ui.header {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 900!important;
+}
+.ui.primary.button {
+  background-color: #f6a015!important;
+}
+.ui.button {
+  border-radius: 0px!important;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif !important;
+  font-weight: normal!important;
+  background: #0099a8!important;
+  color: #FFF!important;
+}
+.ui.inverted.button {
+  background: transparent!important;
+  -webkit-box-shadow: 0 0 0 2px #0099a8 inset!important;
+  box-shadow: 0 0 0 2px #0099a8 inset!important;
+}
+.ui.inverted.primary.button {
+  -webkit-box-shadow: 0 0 0 2px #f6a015 inset!important;
+  box-shadow: 0 0 0 2px #f6a015 inset!important;
+  background: transparent!important;
+  background-color: transparen!important;
+}
+.ui.inverted.button:hover,
+.ui.inverted.button:focus,
+.ui.inverted.button.active,
+.ui.inverted.button.active:focus {
+  background: #0099a8!important;
+  -webkit-box-shadow: 0 0 0 2px #0099a8 inset!important;
+  box-shadow: 0px 0px 0px 2px #0099a8 inset !important;
+}
+.ui.inverted.primary.button:hover,
+.ui.inverted.primary.button:focus,
+.ui.inverted.primary.button.active,
+.ui.inverted.primary.button.active:focus {
+  background: #f6a015!important;
+  -webkit-box-shadow: 0 0 0 2px #f6a015 inset!important;
+  box-shadow: 0px 0px 0px 2px #f6a015 inset !important;
+}
+.bg-HP {
+  background-image: url('../assets/images/visuel-HP.jpg') !important;
+  
+/* pour anciens Chrome et Safari */
+  background-size: cover!important;
+  
+/* version standardisée */
+}
