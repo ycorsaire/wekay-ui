@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/assets/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/assets/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <style type="text/css">
+.mt-5{margin-top:5px!important;}
+.mt-10{margin-top:10px!important;}
+.mt-20{margin-top:20px!important;}
+.mt-30{margin-top:30px!important;}
+.mt-40{margin-top:40px!important;}
+.mt-80{margin-top:80px!important;}
+.mt-100{margin-top:100px!important;}
+.mt-120{margin-top:120px!important;}
+.mt-200{margin-top:200px!important;}
+.mb-20{margin-bottom:20px!important;}
+.mb-40{margin-bottom:40px!important;}  
+.pl-5{padding-left:5px;}
+.pl-40{padding-left:40px!important;}
+.pr-40{padding-right:40px!important;}
+.pt-10{padding-top:10px!important;}
+.pt-30{padding-top:30px!important;}
+.p-10{padding:10px!important;}
+.p-20{padding:20px!important;}
+.p-30{padding:30px!important;}
+.p-40{padding:40px!important;}
+.p-0{padding:0px!important;}
+
+.bg-blue{background-color:#0099a8!important;}
+.bg-blue-medium{background-color:#076f79!important;}
+.bg-orange-light{ background-color:#ffc871!important;}
+.bg-blue-dark{background-color:#1f3b47!important;}
+.bg-grey{background-color:#f4f4f4;}
+
+.border-orange-light{border-top:40px solid #ffc871!important;}
+
+.center-block{
+  margin-left:auto!important; 
+  margin-right:auto!important;
+  display:block!important;
+}
+.text-uppercase{text-transform:uppercase;}
+.text-italic{font-style:italic;}
+.text-right{text-align:right;}
+.text-center{text-align:center;}
+.text-justify{text-align:justify;}
+.bold{font-weight:bold;}
+.white{color:#FFF!important;}
+.orange-light{ background-color:#ffc871!important;}
+.blue-dark{color:#076f79!important;}
+.blue-medium{color:#076f79!important;}
+.blue-light{color:#0099a8!important;}
+.font-m{font-size:1.2em;}
+.font-l{font-size:30px;}
+.font-xl{font-size:40px;}
+.font-title{
+  font-family: 'Playfair Display', serif!important;
+  font-weight:900!important;
+}
+.logo{
+  float: left;
+  margin-left: 20px;
+}
+
+.meta{height:20px;}
+
+h1{ 
+  font-family: 'Playfair Display', serif!important;
+  font-weight:900!important;}
+
+h1.ui.header{ 
+  font-family: 'Playfair Display', serif!important;
+  font-weight:900!important;
+  font-size:50px!important;
+  }
+
+h2.ui.header{ 
+  font-family: 'Playfair Display', serif!important;
+  font-weight:900!important;
+  font-size:50px!important;
+  margin:0px!important;
+  }
+
+h3.ui.header{ 
+  font-family: 'Playfair Display', serif!important;
+  font-weight:900!important;
+  font-size:50px!important;
+  color:#303030;
+  }
+
+.form.dd-cta-form{
+  background-color:rgba(0, 153, 168, 0.5)!important;
+  padding:10px 10px!important;
+  margin-top:20px;
+}
+
+.ui.secondary.inverted.pointing.menu .item{
+  color:#FFF!important; 
+  font-weight:600;
+}
+
+
+.ui.form .fields{
+  margin: 0!important;
+}
+
+.ui.selection.dropdown{
+  border-radius:0px;
+}
+
+.ui.default.dropdown:not(.button)>.text, .ui.dropdown:not(.button)>.default.text{
+  color:#303030!important;
+}
+
+.ui.primary.button{
+  background-color:#f6a015!important;
+  border:2px solid #f6a015!important;
+}
+
+.ui.primary.button:hover{
+  background-color:#feb53f!important;
+  border:2px solid #feb53f!important;
+  -webkit-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
+}
+
+
+.ui.button{
+  border-radius:0px!important;
+  font-family:'Raleway','Helvetica Neue',Arial,Helvetica, sans-serif!important;
+  font-weight:normal!important;
+  background:#0099a8!important;
+  color:#FFF!important;
+  font-size: 1.2em;
+  font-weight:bold;
+}
+
+.ui.inverted.button{
+    background:transparent!important;
+    -webkit-box-shadow: 0 0 0 2px #0099a8 inset!important;
+    box-shadow: 0 0 0 2px #0099a8 inset!important;
+}
+
+.ui.inverted.primary.button{
+   background:transparent!important;
+    -webkit-box-shadow: 0 0 0 0 transparent inset!important;
+    box-shadow: 0 0 0 0 transparent inset!important;
+    background-color:transparent!important;
+    border:2px solid  #f6a015!important;
+    color:#f6a015!important;
+    font-size: 1.2em;
+    font-weight: bold!important;
+}
+
+.ui.inverted.button:hover, .ui.inverted.button:focus,.ui.inverted.button.active, .ui.inverted.button.active:focus {
+  background: #0099a8!important;
+  -webkit-box-shadow: 0 0 0 2px #0099a8 inset!important;
+  box-shadow: 0px 0px 0px 2px #0099a8 inset !important;
+}
+
+.ui.inverted.primary.button:hover, .ui.inverted.primary.button:focus, .ui.inverted.primary.button.active, .ui.inverted.primary.button.active:focus{
+   -webkit-box-shadow: 0 0 0 0 transparent inset!important;
+    box-shadow: 0 0 0 0 transparent inset!important;
+    background-color:#f6a015!important;
+    border:2px solid  #f6a015!important;
+    color:#FFF!important;
+}
+
+.ui.secondary.inverted.pointing.menu{
+  border:0px!important;
+}
+
+
+
+.arrow{
+    position: absolute;
+    right: 0px;
+    margin-top: 50px;
+  }
+
+
+.label-number{
+  color:white;
+  font-family: 'Playfair Display', serif!important;
+  font-weight:900!important;
+  font-size:36px!important;
+  width:50px;
+  height:50px;
+  border-radius: 50px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10px;
+}
+
+.wrapper-icone{
+  height:140px;
+}
+
+.wrapper-icone img{
+  vertical-align:middle;
+}
+
+.ui.vertical.segment{
+  border-bottom: 0px solid white!important;
+}
+
+.leaf-deco{
+  height:220px;
+  background-image: url('../assets/images/leaf-1.jpg'), url('../assets/images/leaf-2.jpg'); 
+  background-position: bottom right, bottom left;
+  background-repeat: no-repeat; 
+}
+
+.wrapper-testimony{
+  background-image: url('../assets/images/quote-1.png'), url('../assets/images/quote-2.png'); 
+  background-position: top left, bottom right;
+  background-repeat: no-repeat; 
+}
+
+.ui.vertical.stripe p {
+    font-size: 1.2em!important;
+    text-align:justify;
+    }
+
+.date{font-size:14px!important;}
+
+.picture-artisan{
+  background-image:url('../assets/images/exemple-artisan.png')!important;
+  -webkit-background-size: cover!important; /* pour anciens Chrome et Safari */
+  background-size: cover!important; /* version standardisée */
+  height:180px;
+  width:100%;
+}
+
+.picture-artisan-default{
+  Background-color:#0099a8;
+  background-image:url('../assets/images/pro.png')!important;
+  background-position: center center;
+  background-repeat: no-repeat; 
+  opacity:0.75;
+  height:180px;
+  width:100%;
+}
+
+.name{font-size: 1.4em;
+    line-height: 24px;}
+
+.pin-map{
+  background-image: url('../assets/images/pin-white.png'); 
+  background-position: center left;
+  background-repeat: no-repeat; 
+  width:12px;
+  height:18px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.ui.card .meta, .ui.cards>.card .meta, .ui.card>.content>.description, .ui.cards>.card>.content>.description{
+  color: #303030; 
+}
+
+.ui.inverted.link.list a.item{
+  color: #FFF; 
+  line-height:24px;
+}
+
+.ui.form input[type=email]{
+  border-radius:0px!important;
+  width: auto;
+}
+
+
+.wrapper-card{
+  background-color:#FFF;
+  text-align:left;
+  /*height:380px;*/
+  border:1px solid #cfcfcf;
+  }
+
+.wrapper-card:hover{
+  -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.ui.large.image{
+  width:100%!important;
+}
+    .hidden.menu {
+      display: none;
+    }
+
+    .masthead.segment {
+      min-height: 600px;
+      padding: 1em 0em;
+    }
+
+    .ui.vertical.stripe {
+      padding: 8em 0em;
+    }
+    .ui.vertical.stripe h3 {
+      font-size: 2em;
+    }
+    .ui.vertical.stripe .button + h3,
+    .ui.vertical.stripe p + h3 {
+      margin-top: 3em;
+    }
+    .ui.vertical.stripe .floated.image {
+      clear: both;
+    }
+    .ui.vertical.stripe p {
+      font-size: 1.33em;
+    }
+    .ui.vertical.stripe .horizontal.divider {
+      margin: 3em 0em;
+    }
+
+    .quote.stripe.segment {
+      padding: 0em;
+    }
+    .quote.stripe.segment .grid .column {
+      padding-top: 5em;
+      padding-bottom: 5em;
+    }
+
+    .footer.segment {
+      padding: 5em 0em;
+    }
+
+    .secondary.pointing.menu .toc.item {
+      display: none;
+    }
+
+    .dd-cta-form {
+        display:inline-block;
+    }
+    .profile-segment-container {
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+
+    .jumbotron {
+        min-height: 600px;
+        padding: 1em 0em;
+    }    
+
+    .jumbotron-heading {
+        font-size: 2em !important;
+        font-weight: bold !important;
+        margin-top: 5em !important;
+        margin-bottom: 1em !important;
+    }
+
+/*Profile pro*/
+.page-header {
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+}
+
+.pro-summary {
+    padding-top: 5em;;
+    background-color: darkslategrey;
+}
+
+.pro-summary-details {
+    background-color: white;
+    margin:0 !important;
+}
+
+.pro-summary-wrapper {
+    padding-bottom: 10px;
+    background: white;
+}
+
+.pro-summary-avatar {
+    padding: 0 !important;
+}
+
+.pro-summary-action {
+    position: absolute;
+    text-align: center;
+    bottom:0px;
+    width: 100%;
+}
+
+.pro-summary-skills {
+    margin-top: 0 !important;
+}
+
+.pro-summary-heart {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    right: 20px;
+}
+
+    @media only screen and (max-width: 700px) {
+      .ui.fixed.menu {
+        display: none !important;
+      }
+      .secondary.pointing.menu .item,
+      .secondary.pointing.menu .menu {
+        display: none;
+      }
+      .secondary.pointing.menu .toc.item {
+        display: block;
+      } 
+      
+      .hidden-sm{
+        display:none!important;
+      }
+    }
+
+
+  </style>
+
+</head>
+<body>
+
+  <div>
+    <div class="ui segment page-header">
+      <div class="ui secondary menu">
+        <div class="ui fluid container">
+          <a class="left item">
+            <img src="/assets/images/logo.png" alt="weKay" title="weKay" class="ui tiny image">
+          </a>
+          <a class="right item">Demander un devis</a>
+          <a class="item">Trouver un professionnel</a>
+          <a class="item">Comment ça marche</a>
+          <a class="item" href="/#">Se connecter</a>
+          <div class="item">
+            <a class="ui button" role="button" href="/pro">Vous êtes un professionnel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pro-summary-wrapper">
+      <div class="pro-summary">
+        <div class="ui container">
+          <div class="ui grid pro-summary-details">
+            <div class="six wide column pro-summary-avatar">
+              <img src="/assets/images/exemple-artisan.png" class="ui image">
+            </div>
+            <div class="ten wide column">
+              <h2 class="ui header">M. ZAMI</h2>
+              <h2 class="ui teal header pro-summary-skills">Charpentier / Couvreur</h2>
+              <div class="pro-summary-heart">
+                <i aria-hidden="true" class="teal heart outline big icon"></i>
+              </div>
+              <div role="list" class="ui list">
+                <div role="listitem" class="item">Entreprise BATI TOU (créé en 2019)</div>
+                <div role="listitem" class="item">
+                  <i aria-hidden="true" class="home disabled icon"></i> Martinique, Fort de France </div>
+              </div>
+              <div role="list" class="ui list">
+                <div role="listitem" class="item">
+                  <i aria-hidden="true" class="check disabled icon"></i> KBis</div>
+                <div role="listitem" class="item">
+                  <i aria-hidden="true" class="check disabled icon"></i> Assurance décennale</div>
+              </div>
+              <div class="ui star massive rating" role="radiogroup">
+                <i aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                <i aria-checked="false" aria-posinset="2" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                <i aria-checked="true" aria-posinset="3" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                <i aria-checked="false" aria-posinset="4" aria-setsize="5" class="icon" tabindex="0" role="radio"></i>
+                <i aria-checked="false" aria-posinset="5" aria-setsize="5" class="icon" tabindex="0" role="radio"></i>
+              </div>
+              <div class="pro-summary-action">
+                <button class="ui primary large button" role="button">Demander un devis</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bg-grey pt-30" style="height:100%;">
+
+
+      <!-- Pro présentation -->
+      <div class="ui container pro-description-container">
+        <div class="ui segment">
+          <h3 class="ui header">Charpentier / couvreur: </h3>
+          <p>Spécialiste de la structure de toit, le charpentier crée la charpente de toit, élément indispensable de la maison.
+            Il doit effectuer le calcul de charges et préparer l'épure. Charpente traditionnelle, fermette ou encore métallique,
+            il vous conseille sur le choix à prendre.</p>
+          <h3 class="ui header">L'entreprise et l'activité de M. ZAMI: </h3>
+          <p>Petite entreprise général de bâtiment, nous évoluons autant dans le neuf que dans la rénovation. Nous sommes autonomme
+            des fondations, au dernier coup de pinceau. No références, nous sommes partenaire Camif Habitat, Leroy Merlin et
+            Castorama. Ce sont nos clients qui en parlent le mieux, 35 ans d'expérience.</p>
+          <p>Nos domaines de compétences: Agrandissement, aménagement des combles, charpente, fenêtres et rénovation complète.</p>
+        </div>
+      </div>
+  
+      <!-- Photos de chantiers -->
+      <div class="ui container profile-segment-container">
+        <div class="ui segment">
+          <h3 class="ui header">Quelques photos de chantiers réalisés: </h3>
+          <div class="ui three column grid">
+            <div class="column">
+              <img src="/assets/images/image_2.png" class="ui image">
+            </div>
+            <div class="column">
+              <img src="/assets/images/image_2.png" class="ui image">
+            </div>
+            <div class="column">
+              <img src="/assets/images/image_2.png" class="ui image">
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Les chantiers sur WeKay -->
+      <div class="ui container profile-segment-container">
+        <div class="ui segment">
+          <h3 class="ui header">Les chantiers sur WeKay: </h3>
+          <div class="ui comments">
+            <div class="comment">
+              <a class="avatar">
+                <img src="/assets/images/image_2.png">
+              </a>
+              <div class="content">
+                <div class="author">Michel M.</div>
+                <div class="metadata">
+                  <div>21 Janvier 2018</div>
+                  <div>
+                    <i aria-hidden="true" class="star icon"></i>5 Faves</div>
+                </div>
+                <div class="text">J'ai fait appel à M.Zami pour des travaux sur la toiture de ma maison. Il m'a donné un devis rapidement.
+                  Les travaux sont parfaits! Je recommande vivment ses services.
+  
+                </div>
+              </div>
+            </div>
+            <div class="comment">
+              <a class="avatar">
+                <img src="/assets/images/image_2.png">
+              </a>
+              <div class="content">
+                <div class="author">Catherine R.</div>
+                <div class="metadata">
+                  <div>5 Janvier 2018</div>
+                  <div>
+                    <i aria-hidden="true" class="star icon"></i>5 Faves</div>
+                </div>
+                <div class="text">M.Zami et son entreprise sont intervenus pour une rénovation de la toiture de ma maison.
+                  Je suis très heureuse du résultat qui correspondait à mes attentes. Merci
+                </div>
+              </div>
+            </div>
+            <div class="comment">
+              <a class="avatar">
+                <img src="/assets/images/image_2.png">
+              </a>
+              <div class="content">
+                <div class="author">Bernardo K.</div>
+                <div class="metadata">
+                  <div>10 Octobre 2017</div>
+                  <div>
+                    <i aria-hidden="true" class="star icon"></i>5 Faves</div>
+                </div>
+                <div class="text">Rapidité de réponse et devis clair avec des tarifs justes !</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Les recommandations externes -->
+      <div class="ui container profile-segment-container">
+        <div class="ui segment">
+          <h3 class="ui header">Les recoommandations externes </h3>
+          <div class="ui comments">
+            <div class="comment">
+              <a class="avatar">
+                <img src="/assets/images/image_2.png">
+              </a>
+              <div class="content">
+                <div class="author">Maddy V.</div>
+                <div class="metadata">
+                  <div>15 Septembre 2017</div>
+      
+                  <div class="text">M. Zami s'est occupé de l'ensemble de la charpente et de la toiture de ma nouvelle maison. Je suis très contente
+                    de son travail et je le recommande vivement pour sa fiabilité.
+      
+                  </div>
+                </div>
+              </div>
+              <div class="comment">
+                <a class="avatar">
+                  <img src="/assets/images/image_2.png">
+                </a>
+                <div class="content">
+                  <div class="author">Jean R.</div>
+                  <div class="metadata">
+                    <div>5 Mars 2017</div>
+                    <div class="text">Je recommande M.Zami pour sa rapidité d'éxécution et son sérieux.Je ferai de nouveau appel à lui si besoin.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Les labels qualités du professionnel -->
+      <div class="ui container profile-segment-container">
+          <div class="ui segment">
+            <h3 class="ui header">Les labels qualités du professionnel: </h3>
+            <div class="ui two column grid">
+              <div class="column">
+                <img src="/assets/images/image_2.png" class="ui image">
+              </div>
+              <div class="column">
+                <img src="/assets/images/image_2.png" class="ui image">
+              </div>
+            </div>
+          </div>
+  
+          <button class="ui primary button center-block" role="button">Demander un devis</button> 
+        </div>
+        
+        
+      <div class="ui container profile-segment-container">
+          <div class="row">
+              <div class="column">
+                <h3 class="ui center aligned header mt-40" style="font-size: 3em;">Ces professionnels correspondent <br/> aussi à votre recherche !</h3>
+              </div>
+          </div>      
+        
+        <div class="ui four cards">
+          <div class="ui card">
+            <img src="/assets/images/image_2.png" class="ui image">
+            <div class="content">
+              <div class="header">Charpentier, Couvreur</div>
+              <div class="meta">
+                <i aria-hidden="true" class="check disabled icon"></i>Kbis</div>
+              <div class="meta">
+                <i aria-hidden="true" class="check disabled icon"></i>Assurance décennale</div>
+              <div class="description">4 Chantiers</div>
+            </div>
+            <div class="extra center aligned content">
+              <div class="ui star massive rating" role="radiogroup">
+                <i aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                <i aria-checked="false" aria-posinset="2" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                <i aria-checked="false" aria-posinset="3" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                <i aria-checked="false" aria-posinset="4" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                <i aria-checked="true" aria-posinset="5" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+              </div>
+            </div>
+          </div>
+          <div class="ui card">
+            <img src="/assets/images/image_2.png" class="ui image">
+            <div class="content">
+              <div class="header">Peintre, Plombier</div>
+              <div class="meta">
+                <i aria-hidden="true" class="check disabled icon"></i>Kbis</div>
+              <div class="description">11 Chantiers</div>
+            </div>
+            <div class="extra center aligned content">
+              <div class="ui star massive rating" role="radiogroup">
+                <i aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                <i aria-checked="false" aria-posinset="2" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                <i aria-checked="false" aria-posinset="3" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                <i aria-checked="false" aria-posinset="4" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                <i aria-checked="true" aria-posinset="5" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+              </div>
+            </div>
+          </div>
+          <div class="ui card">
+            <img src="/assets/images/image_2.png" class="ui image">
+            <div class="content">
+              <div class="header">Rénovation intérieur</div>
+              <div class="meta">
+                <i aria-hidden="true" class="check disabled icon"></i>Kbis</div>
+              <div class="meta">
+                <i aria-hidden="true" class="check disabled icon"></i>Assurance décennale</div>
+              <div class="description">7 Chantiers</div>
+            </div>
+            <div class="extra center aligned content">
+              <div class="ui star massive rating" role="radiogroup">
+                <i aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                <i aria-checked="false" aria-posinset="2" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                <i aria-checked="false" aria-posinset="3" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                <i aria-checked="false" aria-posinset="4" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                <i aria-checked="true" aria-posinset="5" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+              </div>
+            </div>
+          </div>
+          <div class="ui card">
+            <img src="/assets/images/image_2.png" class="ui image">
+            <div class="content">
+              <div class="header">Electricien</div>
+              <div class="meta">
+                <i aria-hidden="true" class="check disabled icon"></i>Kbis</div>
+              <div class="description">8 Chantiers</div>
+            </div>
+            <div class="extra center aligned content">
+              <div class="ui star massive rating" role="radiogroup">
+                <i aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                <i aria-checked="false" aria-posinset="2" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                <i aria-checked="false" aria-posinset="3" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                <i aria-checked="false" aria-posinset="4" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                <i aria-checked="true" aria-posinset="5" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ui inverted vertical segment bg-blue-dark">
+      <div class="ui container">
+        <div class="ui stackable grid">
+          <div class="four column row">
+            <div class="column mt-20">
+              <h4 class="ui inverted header">Vous êtes un particulier ?</h4>
+              <div role="list" class="ui inverted link list">
+                <a role="listitem" class="item">Demander un devis</a>
+                <a role="listitem" class="item">Trouver un professionnel</a>
+                <a role="listitem" class="item">Comment ça marche ?</a>
+                <a role="listitem" class="item">Nos émissions et conseils</a>
+                <a role="listitem" class="item">Se Connecter</a>
+                <a role="listitem" class="item">Mentions légales &amp; CGV</a>
+                <a role="listitem" class="item">Nous contacter</a>
+              </div>
+            </div>
+            <div class="column mt-20">
+              <h4 class="ui inverted header">Vous êtes un professionnel ?</h4>
+              <div role="list" class="ui inverted link list">
+                <a role="listitem" class="item">Comment ça marche ?</a>
+                <a role="listitem" class="item">S'inscrire</a>
+                <a role="listitem" class="item">Se Connecter</a>
+                <a role="listitem" class="item">Mentions légales &amp; CGV</a>
+                <a role="listitem" class="item">Nous contacter</a>
+              </div>
+            </div>
+            <div class="column mt-20">
+              <h4 class="ui inverted header">Abonnez-vous à notre newsletter :</h4>
+              <p>Découvrez nos conseils et dernières nouveautés en vous inscrivant à notre newsletter.</p>
+              <form class="ui form">
+                <div class="ui action input newsletter">
+                  <input type="email" placeholder="Votre email">
+                  <button class="ui primary button" role="button">Ok</button>
+                </div>
+              </form>
+            </div>
+            <div class="column mt-20">
+              <h4 class="ui inverted header">Suivez nous :</h4>
+              <div>
+                <a href="">
+                  <img src="/assets/images/facebook.jpg" class="">
+                </a>
+                <a href="">
+                  <img src="/assets/images/youtube.jpg" class="pl-5">
+                </a>
+                <a href="">
+                  <img src="/assets/images/twitter.jpg" class="pl-5">
+                </a>
+                <a href="">
+                  <img src="/assets/images/google.jpg" class="pl-5">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="semantic/dist/semantic.min.js"></script>
+  <script>
+  $(document)
+    .ready(function() {
+
+
+
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+        .sidebar('attach events', '.toc.item')
+      ;
+
+    })
+  ;
+  </script>
+</body>
+</html>

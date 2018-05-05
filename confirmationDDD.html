@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/assets/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/assets/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <style type="text/css">
+.mt-5{margin-top:5px!important;}
+.mt-10{margin-top:10px!important;}
+.mt-20{margin-top:20px!important;}
+.mt-30{margin-top:30px!important;}
+.mt-40{margin-top:40px!important;}
+.mt-80{margin-top:80px!important;}
+.mt-100{margin-top:100px!important;}
+.mt-120{margin-top:120px!important;}
+.mt-200{margin-top:200px!important;}
+.mb-20{margin-bottom:20px!important;}
+.mb-40{margin-bottom:40px!important;}  
+.pl-5{padding-left:5px;}
+.pl-40{padding-left:40px!important;}
+.pr-40{padding-right:40px!important;}
+.pt-10{padding-top:10px!important;}
+.p-10{padding:10px!important;}
+.p-20{padding:20px!important;}
+.p-30{padding:30px!important;}
+.p-40{padding:40px!important;}
+.p-0{padding:0px!important;}
+
+.bg-blue{background-color:#0099a8!important;}
+.bg-blue-medium{background-color:#076f79!important;}
+.bg-orange-light{ background-color:#ffc871!important;}
+.bg-blue-dark{background-color:#1f3b47!important;}
+.bg-grey{background-color:#f4f4f4;}
+
+.border-orange-light{border-top:40px solid #ffc871!important;}
+
+.center-block{
+  margin-left:auto!important; 
+  margin-right:auto!important;
+  display:block!important;
+}
+.text-uppercase{text-transform:uppercase;}
+.text-italic{font-style:italic;}
+.text-right{text-align:right;}
+.text-center{text-align:center;}
+.text-justify{text-align:justify;}
+.bold{font-weight:bold;}
+.white{color:#FFF!important;}
+.orange-light{ background-color:#ffc871!important;}
+.blue-dark{color:#076f79!important;}
+.blue-medium{color:#076f79!important;}
+.blue-light{color:#0099a8!important;}
+.font-m{font-size:1.2em;}
+.font-l{font-size:30px;}
+.font-xl{font-size:40px;}
+.font-title{
+  font-family: 'Playfair Display', serif!important;
+  font-weight:900!important;
+}
+.logo{
+  float: left;
+  margin-left: 20px;
+}
+
+.meta{height:20px;}
+
+h1{ 
+  font-family: 'Playfair Display', serif!important;
+  font-weight:900!important;}
+
+h1.ui.header{ 
+  font-family: 'Playfair Display', serif!important;
+  font-weight:900!important;
+  font-size:50px!important;
+  }
+
+h2.ui.header{ 
+  font-family: 'Playfair Display', serif!important;
+  font-weight:900!important;
+  font-size:50px!important;
+  margin:0px!important;
+  }
+
+h3.ui.header{ 
+  font-family: 'Playfair Display', serif!important;
+  font-weight:900!important;
+  font-size:50px!important;
+  color:#303030;
+  }
+
+.form.dd-cta-form{
+  background-color:rgba(0, 153, 168, 0.5)!important;
+  padding:10px 10px!important;
+  margin-top:20px;
+}
+
+.ui.secondary.inverted.pointing.menu .item{
+  color:#FFF!important; 
+  font-weight:600;
+}
+
+
+.ui.form .fields{
+  margin: 0!important;
+}
+
+.ui.selection.dropdown{
+  border-radius:0px;
+}
+
+.ui.default.dropdown:not(.button)>.text, .ui.dropdown:not(.button)>.default.text{
+  color:#303030!important;
+}
+
+.ui.primary.button{
+  background-color:#f6a015!important;
+  border:2px solid #f6a015!important;
+}
+
+.ui.primary.button:hover{
+  background-color:#feb53f!important;
+  border:2px solid #feb53f!important;
+  -webkit-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
+}
+
+
+.ui.button{
+  border-radius:0px!important;
+  font-family:'Raleway','Helvetica Neue',Arial,Helvetica, sans-serif!important;
+  font-weight:normal!important;
+  background:#0099a8!important;
+  color:#FFF!important;
+  font-size: 1.2em;
+  font-weight:bold;
+}
+
+.ui.inverted.button{
+    background:transparent!important;
+    -webkit-box-shadow: 0 0 0 2px #0099a8 inset!important;
+    box-shadow: 0 0 0 2px #0099a8 inset!important;
+}
+
+.ui.inverted.primary.button{
+   background:transparent!important;
+    -webkit-box-shadow: 0 0 0 0 transparent inset!important;
+    box-shadow: 0 0 0 0 transparent inset!important;
+    background-color:transparent!important;
+    border:2px solid  #f6a015!important;
+    color:#f6a015!important;
+    font-size: 1.2em;
+    font-weight: bold!important;
+}
+
+.ui.inverted.button:hover, .ui.inverted.button:focus,.ui.inverted.button.active, .ui.inverted.button.active:focus {
+  background: #0099a8!important;
+  -webkit-box-shadow: 0 0 0 2px #0099a8 inset!important;
+  box-shadow: 0px 0px 0px 2px #0099a8 inset !important;
+}
+
+.ui.inverted.primary.button:hover, .ui.inverted.primary.button:focus, .ui.inverted.primary.button.active, .ui.inverted.primary.button.active:focus{
+   -webkit-box-shadow: 0 0 0 0 transparent inset!important;
+    box-shadow: 0 0 0 0 transparent inset!important;
+    background-color:#f6a015!important;
+    border:2px solid  #f6a015!important;
+    color:#FFF!important;
+}
+
+.ui.secondary.inverted.pointing.menu{
+  border:0px!important;
+}
+
+
+
+.arrow{
+    position: absolute;
+    right: 0px;
+    margin-top: 50px;
+  }
+
+
+.label-number{
+  color:white;
+  font-family: 'Playfair Display', serif!important;
+  font-weight:900!important;
+  font-size:36px!important;
+  width:50px;
+  height:50px;
+  border-radius: 50px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10px;
+}
+
+.wrapper-icone{
+  height:140px;
+}
+
+.wrapper-icone img{
+  vertical-align:middle;
+}
+
+.ui.vertical.segment{
+  border-bottom: 0px solid white!important;
+}
+
+.leaf-deco{
+  height:220px;
+  background-image: url('../assets/images/leaf-1.jpg'), url('../assets/images/leaf-2.jpg'); 
+  background-position: bottom right, bottom left;
+  background-repeat: no-repeat; 
+}
+
+.wrapper-testimony{
+  background-image: url('../assets/images/quote-1.png'), url('../assets/images/quote-2.png'); 
+  background-position: top left, bottom right;
+  background-repeat: no-repeat; 
+}
+
+.ui.vertical.stripe p {
+    font-size: 1.2em!important;
+    text-align:justify;
+    }
+
+.date{font-size:14px!important;}
+
+.picture-artisan{
+  background-image:url('../assets/images/exemple-artisan.png')!important;
+  -webkit-background-size: cover!important; /* pour anciens Chrome et Safari */
+  background-size: cover!important; /* version standardisée */
+  height:180px;
+  width:100%;
+}
+
+.picture-artisan-default{
+  Background-color:#0099a8;
+  background-image:url('../assets/images/pro.png')!important;
+  background-position: center center;
+  background-repeat: no-repeat; 
+  opacity:0.75;
+  height:180px;
+  width:100%;
+}
+
+.name{font-size: 1.4em;
+    line-height: 24px;}
+
+.pin-map{
+  background-image: url('../assets/images/pin-white.png'); 
+  background-position: center left;
+  background-repeat: no-repeat; 
+  width:12px;
+  height:18px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.ui.card .meta, .ui.cards>.card .meta, .ui.card>.content>.description, .ui.cards>.card>.content>.description{
+  color: #303030; 
+}
+
+.ui.inverted.link.list a.item{
+  color: #FFF; 
+  line-height:24px;
+}
+
+.ui.form input[type=email]{
+  border-radius:0px!important;
+  width: auto;
+}
+
+
+.wrapper-card{
+  background-color:#FFF;
+  text-align:left;
+  /*height:380px;*/
+  border:1px solid #cfcfcf;
+  }
+
+.wrapper-card:hover{
+  -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.ui.large.image{
+  width:100%!important;
+}
+    .hidden.menu {
+      display: none;
+    }
+
+    .masthead.segment {
+      min-height: 600px;
+      padding: 1em 0em;
+    }
+
+    .ui.vertical.stripe {
+      padding: 8em 0em;
+    }
+    .ui.vertical.stripe h3 {
+      font-size: 2em;
+    }
+    .ui.vertical.stripe .button + h3,
+    .ui.vertical.stripe p + h3 {
+      margin-top: 3em;
+    }
+    .ui.vertical.stripe .floated.image {
+      clear: both;
+    }
+    .ui.vertical.stripe p {
+      font-size: 1.33em;
+    }
+    .ui.vertical.stripe .horizontal.divider {
+      margin: 3em 0em;
+    }
+
+    .quote.stripe.segment {
+      padding: 0em;
+    }
+    .quote.stripe.segment .grid .column {
+      padding-top: 5em;
+      padding-bottom: 5em;
+    }
+
+    .footer.segment {
+      padding: 5em 0em;
+    }
+
+    .secondary.pointing.menu .toc.item {
+      display: none;
+    }
+
+    .dd-cta-form {
+        display:inline-block;
+    }
+    .profile-segment-container {
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+
+    .jumbotron {
+        min-height: 600px;
+        padding: 1em 0em;
+    }    
+
+    .jumbotron-heading {
+        font-size: 2em !important;
+        font-weight: bold !important;
+        margin-top: 5em !important;
+        margin-bottom: 1em !important;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .ui.fixed.menu {
+        display: none !important;
+      }
+      .secondary.pointing.menu .item,
+      .secondary.pointing.menu .menu {
+        display: none;
+      }
+      .secondary.pointing.menu .toc.item {
+        display: block;
+      } 
+      
+      .hidden-sm{
+        display:none!important;
+      }
+    }
+
+
+  </style>
+
+</head>
+<body>
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
+  <div class="ui container">
+    <a class="right item">Comment ça marche</a>
+    <a class="item">S'inscrire</a>
+    <a class="item">Se connecter</a>
+    <div class="right menu">
+      <div class="item">
+        <a class="ui button">Vous êtes un particulier ?</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+  <a class="item">Comment ça marche</a>
+  <a class="item">S'inscrire</a>
+  <a class="item">Se connecter</a>
+  <a class="item">Vous êtes un particulier ?</a>
+</div>
+
+
+<!-- Page Contents -->
+<div class="pusher">
+  <!-- Jumbotron  -->
+    <div class="ui inverted vertical center aligned segment">
+        <a href="#" class="logo"><img src="/assets/images/logo.png" alt="weKay Pro" title="weKay Pro"></a> 
+      <div class="ui large inverted pointing secondary menu">
+      <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>        
+        <div class="ui fluid container">
+            <a class="right item">Demander un devis</a>
+            <a class="item">Trouver un professionnel</a>
+            <a class="item">Comment ça marche</a>
+            <a class="item" href="/#">Se connecter</a>
+            <div class="item">
+                <a class="ui button" role="button" href="/pro">Vous êtes un professionnel</a>
+            </div>
+        </div>
+      </div>
+      <div class="ui fluid container">
+
+          <div class="ui two column grid mt-80">
+              <div class="ui text">
+                    <h1 class="ui inverted header">Merci pour votre confiance. <br/>nous avons bien reçu <br/> votre demande de devis</h1>
+              </div>
+              <div class="ui segment">
+                <p>
+                    Votre demande de devis est enregistrée sous la référence: <br/>
+                    N° 565665 <br/>
+                    Vous allez recevoir un email récapitulant les informations de votre demande de devis. <br/>
+                    Si vous désirez la modifier, connectez-vous sur votre espace personnel.
+                </p>
+                <a class="ui primary button" role="button" href="#">Se connecter</a>
+              </div>
+          </div>
+
+      </div>
+
+    </div>
+
+<!-- Prochaine étapes -->
+<div class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid container">
+        <div class="row">
+            <div class="column">
+                <h3 class="ui center aligned header" style="font-size: 3em;">Quelles sont les prochaines étapes ?</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="three wide left floated column">
+                <img src="/assets/images/testimony-2.png" class="ui large rounded image">
+            </div>
+            <div class="eleven wide column">
+                <div>
+                    <div>1</div>
+                    <div>
+                        <p>Votre demande est validée par un conseiller WeKay
+                            <br/> Vous allez être contacté par un conseiller WeKay pour valider et compléter si nécessaire votre
+                            demande de devis. Nous souhaitons comprendre au mieux votre demande afin de trouver l'artisan
+                            dont vous avez besoin.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="eleven wide column">
+                <div>
+                    <div>2</div>
+                    <div>
+                        <p>Votre demande est transmise à des professionnels qualifiés
+                            <br/> Nous transmettons votre demande à 5 artisans correspondants aux critères de votre demande de devis.
+                            Ceux-ci vous contacterons afin de réaliser avec précision leur demande de devis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+                <div class="three wide right floated column">
+                    <img src="/assets/images/testimony-2.png" class="ui large rounded image">
+                </div>
+            </div>
+            <div class="row">
+                    <div class="three wide left floated column">
+                        <img src="/assets/images/testimony-2.png" class="ui large rounded image">
+                    </div>
+                    <div class="eleven wide column">
+                        <div>
+                            <div>3</div>
+                            <div>
+                            <p>Vous recevez des devis et faites votre choix.
+                                    <br/> Vous recevez des devis (au maximum 5 demandes). Une fois votre choix réalisé, vous validez votre choix sur WeKay
+                                    en versant un acompte actant le début des travaux.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="eleven wide column">
+                        <div>
+                            <div>4</div>
+                            <div>
+                                <p>Vos travaux sont réalisés !
+                                    <br/> Le professionnel réalise vos travaux. Une fois ceux-ci terminés,
+                                    vous réglez en toute sécurité le reste du montant du chantier sur WeKay.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="three wide right floated column">
+                        <img src="/assets/images/testimony-2.png" class="ui large rounded image">
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="center aligned column">
+                          <button class="ui inverted primary button" role="button">Déposer une nouvelle demande de devis</button>
+                        </div>
+                </div>
+    </div>
+</div>
+<div class="leaf-deco"></div>
+<!-- Reassurance -->
+<div class="ui vertical segment bg-blue-medium border-orange-light" style="padding: 4em 0em;">
+    <div class="ui stackable grid">
+      <div class="row">
+        <div class="column">
+          <h3 class="ui center aligned header white" style="font-size: 3em;">3 raisons de nous faire confiance </h3>
+        </div>
+      </div>
+      <div class="three column row" style="padding: 2em 0em;">
+        <div class="center aligned column">
+            <div class="wrapper-icone"><img src="/assets/images/icone-reason-1.png"  class="mt-20"></div>
+          <p class="white  text-uppercase mt-20" style="font-size: 1.2em; padding: 0em 1.5em;">Des conseillers WeKay <br> à votre service</p>
+        </div>
+        <div class="center aligned column">
+            <div class="wrapper-icone"><img src="/assets/images/icone-reason-2.png"  class="mt-20"></div>
+          <p class="white  text-uppercase mt-20" style="font-size: 1.2em; padding: 0em 1.5em;">Des artisans qualifiés</p>
+        </div>
+        <div class="center aligned column">
+          <div class="wrapper-icone"><img src="/assets/images/icone-reason-3.png"  class="mt-20"></div>
+          <p class="white text-uppercase mt-20" style="font-size: 1.2em; padding: 0em 1.5em;">Un paiement sécurisé qui vous assure des travaux de qualité</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Emission-->
+  <div class="ui vertical segment">
+        <div class="ui container">
+        <div class="row">
+                <div class="column">
+                    <h3 class="ui center aligned header" style="font-size: 3em;">Consulter nos émissions et conseils<br/> sur l'habitat Caraïbéen</h3>
+                </div>
+            </div>
+          <div class="ui container stackable grid mt-40">              
+              <div class="three column row">
+                  <div class="center aligned column">
+                      <div class="wrapper-card">
+                          <div class="picture-artisan p-20">
+                              <div class="name white text-uppercase bold mt-100">M. Zami</div>
+                              <div class="localisation white bold">
+                                <span class="pin-map"></span> Martinique
+                              </div>
+                          </div>
+                          <div class="content">
+                            <div class="header text-uppercase blue-light bold">Peintre, Plombier</div>
+                            <div class="meta mt-20">
+                              <i aria-hidden="true" class="check icon blue-light"></i>Kbis</div>
+                            <div class="meta">
+                                <i aria-hidden="true" class=""></i></div>
+                            <div class="description mt-20 bold">11 Chantiers</div>
+                          </div>
+                          <div class="extra center aligned content text-center pt-10">
+                            <div class="ui star massive rating" role="radiogroup">
+                              <i aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                              <i aria-checked="false" aria-posinset="2" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                              <i aria-checked="false" aria-posinset="3" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                              <i aria-checked="false" aria-posinset="4" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                              <i aria-checked="true" aria-posinset="5" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                            </div>
+                          </div>
+                          <button class="ui primary button center-block mb-20" role="button">Demander un devis</button>
+                        </div>
+                  </div>
+                  <div class="center aligned column">
+                      <div class="wrapper-card">
+                          <div class="picture-artisan p-20">
+                              <div class="name white text-uppercase bold mt-100">M. Zami</div>
+                              <div class="localisation white bold">
+                                <span class="pin-map"></span> Martinique
+                              </div>
+                          </div>
+                          <div class="content">
+                            <div class="header text-uppercase blue-light bold">Rénovation intérieur</div>
+                            <div class="meta mt-20">
+                              <i aria-hidden="true" class="check icon blue-light"></i>Kbis</div>
+                            <div class="meta">
+                              <i aria-hidden="true" class="check icon blue-light"></i>Assurance décennale</div>
+                            <div class="description mt-20 bold">7 Chantiers</div>
+                          </div>
+                          <div class="extra center aligned content text-center pt-10">
+                            <div class="ui star massive rating" role="radiogroup">
+                              <i aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                              <i aria-checked="false" aria-posinset="2" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                              <i aria-checked="false" aria-posinset="3" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                              <i aria-checked="false" aria-posinset="4" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                              <i aria-checked="true" aria-posinset="5" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                            </div>
+                          </div>
+                          <button class="ui primary button center-block mb-20" role="button">Demander un devis</button>
+                        </div>
+                  </div>
+                  <div class="center aligned column">
+                        <div class="wrapper-card">
+                            <div class="picture-artisan p-20">
+                                <div class="name white text-uppercase bold mt-100">M. Zami</div>
+                                <div class="localisation white bold">
+                                  <span class="pin-map"></span> Martinique
+                                </div>
+                            </div>
+                            <div class="content">
+                              <div class="header text-uppercase blue-light bold">Rénovation intérieur</div>
+                              <div class="meta mt-20">
+                                <i aria-hidden="true" class="check icon blue-light"></i>Kbis</div>
+                              <div class="meta">
+                                <i aria-hidden="true" class="check icon blue-light"></i>Assurance décennale</div>
+                              <div class="description mt-20 bold">7 Chantiers</div>
+                            </div>
+                            <div class="extra center aligned content text-center pt-10">
+                              <div class="ui star massive rating" role="radiogroup">
+                                <i aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                                <i aria-checked="false" aria-posinset="2" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                                <i aria-checked="false" aria-posinset="3" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                                <i aria-checked="false" aria-posinset="4" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                                <i aria-checked="true" aria-posinset="5" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                              </div>
+                            </div>
+                            <button class="ui primary button center-block mb-20" role="button">Demander un devis</button>
+                          </div>
+                    </div>                  
+                </div>
+                <div class="row">
+                    <div class="center aligned column mt-40 mb-40">
+                      <button class="ui primary button" role="button">Plus d'émissions et conseils</button>
+                    </div>
+                </div>
+              </div>
+            </div> 
+          </div>  
+<!-- FOOTER-->
+  <!-- FOOTER-->
+  <div class="ui inverted vertical segment bg-blue-dark">
+      <div class="ui container">
+        <div class="ui stackable grid">
+          <div class="four column row">
+            <div class="column mt-20">
+              <h4 class="ui inverted header">Vous êtes un particulier ?</h4>
+              <div role="list" class="ui inverted link list">
+                <a role="listitem" class="item">Demander un devis</a>
+                <a role="listitem" class="item">Trouver un professionnel</a>
+                <a role="listitem" class="item">Comment ça marche ?</a>
+                <a role="listitem" class="item">Nos émissions et conseils</a>
+                <a role="listitem" class="item">Se Connecter</a>
+                <a role="listitem" class="item">Mentions légales &amp; CGV</a>
+                <a role="listitem" class="item">Nous contacter</a>
+              </div>
+            </div>
+            <div class="column mt-20">
+              <h4 class="ui inverted header">Vous êtes un professionnel ?</h4>
+              <div role="list" class="ui inverted link list">
+                <a role="listitem" class="item">Comment ça marche ?</a>
+                <a role="listitem" class="item">S'inscrire</a>
+                <a role="listitem" class="item">Se Connecter</a>
+                <a role="listitem" class="item">Mentions légales &amp; CGV</a>
+                <a role="listitem" class="item">Nous contacter</a>
+              </div>
+            </div>
+            <div class="column mt-20">
+              <h4 class="ui inverted header">Abonnez-vous à notre newsletter :</h4>
+              <p>Découvrez nos conseils et dernières nouveautés en vous inscrivant à notre newsletter.</p>
+              <form class="ui form">
+                <div class="ui action input newsletter">
+                  <input type="email" placeholder="Votre email">
+                  <button class="ui primary button p-10" role="button">OK</button>
+                </div>
+              </form>
+            </div>
+            <div class="column mt-20">
+              <h4 class="ui inverted header">Suivez nous :</h4>
+              <div>
+                  <a href=""><img src="/assets/images/facebook.jpg" class="" alt="facebook" title="facebook"></a>
+                  <a href=""><img src="/assets/images/youtube.jpg" class="pl-5" alt="you tube" title="you tube"></a>
+                  <a href=""><img src="/assets/images/twitter.jpg" class="pl-5" alt="twitter" title="twitter"></a>
+                  <a href=""><img src="/assets/images/google.jpg" class="pl-5" alt="google plus" title="google plus"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="semantic/dist/semantic.min.js"></script>
+  <script>
+  $(document)
+    .ready(function() {
+
+
+
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+        .sidebar('attach events', '.toc.item')
+      ;
+
+    })
+  ;
+  </script>
+</body>
+</html>
