@@ -79,7 +79,9 @@
   margin-left: 20px;
 }
 
-.meta{height:20px;}
+.meta{height:20px;
+  overflow: hidden;
+  text-overflow: ellipsis;}
 
 h1{ 
   font-family: 'Playfair Display', serif!important;
@@ -114,6 +116,10 @@ h3.ui.header{
 .ui.secondary.inverted.pointing.menu .item{
   color:#FFF!important; 
   font-weight:600;
+}
+
+.ui.secondary.pointing.menu .item{
+  padding:10px;
 }
 
 
@@ -235,7 +241,7 @@ h3.ui.header{
 
 .leaf-deco{
   height:220px;
-  background-image: url('../assets/images/leaf-1.jpg'), url('../assets/images/leaf-2.jpg'); 
+  background-image: url('../assets/images/leaf-1.png'), url('../assets/images/leaf-2.png'); 
   background-position: bottom right, bottom left;
   background-repeat: no-repeat; 
 }
@@ -482,6 +488,16 @@ h3.ui.header{
         margin-bottom: 1em !important;
     }
 
+    @media only screen and (max-width: 768px) {
+      .ui.massive.rating{
+        font-size: 1.3rem!important;
+      }
+
+      .font-l-sm{
+        font-size:30px;
+      }
+    }
+
     @media only screen and (max-width: 700px) {
       .ui.fixed.menu {
         display: none !important;
@@ -508,6 +524,13 @@ h3.ui.header{
       .hidden-sm{
         display:none!important;
       }
+
+       .logo{
+        float:right;
+        margin-right:15px;
+      }
+
+      .mt-xs-40{margin-top:40px!important;}
     }
 
 
@@ -556,7 +579,7 @@ h3.ui.header{
           </div>
         </div>
       </div>
-      <div class="ui text mt-120">
+      <div class="ui text mt-120 mt-xs-40">
             <h2 class="ui inverted header jumbotron-heading">Trouver de nouveaux chantier <br>en toute simplicité et sans engagement !</h2>
       </div>
     <div class="ui text container mt-20">
@@ -618,8 +641,8 @@ h3.ui.header{
     <div class="ui middle aligned stackable grid">
         <div class="row bg-blue-medium p-0">
             <div class="ten wide column pl-40 white bold font-xl">
-                <p>Mise en relation gratuite avec les clients.</p>
-                <p>Moins de prospection, plus de revenus.</p>
+                <p class="font-l-sm">Mise en relation gratuite avec les clients.</p>
+                <p class="font-l-sm">Moins de prospection, plus de revenus.</p>
             </div>
             <div class="six wide right floated column">
                 <img src="/assets/images/visuel-pro-1.jpg" class="ui large image" alt="professionnel du bois" title="professionnel du bois">
@@ -634,8 +657,8 @@ h3.ui.header{
                 <img src="/assets/images/visuel-pro-2.jpg" class="ui large image" alt="professionnel de la rénovation" title="professionnel de la rénovation">
             </div>
             <div class="ten wide column pr-40 text-right bold font-xl blue-medium">
-                <p>Contractualisation en ligne sur WeKay</p>
-                <p>Devis et factures automatisées</p>
+                <p class="font-l-sm">Contractualisation en ligne sur WeKay</p>
+                <p class="font-l-sm">Devis et factures automatisées</p>
             </div>
         </div>
     </div>
@@ -644,8 +667,8 @@ h3.ui.header{
     <div class="ui middle aligned stackable grid">
         <div class="row bg-blue-medium p-0">
             <div class="ten wide column pl-40 white bold font-xl">
-                <p>Des chantiers localisés aux Caraibe</p>
-                <p>Des recommandations au service de votre réputation et de vos revenus</p>
+                <p class="font-l-sm">Des chantiers localisés aux Caraibe</p>
+                <p class="font-l-sm">Des recommandations au service de votre réputation et de vos revenus</p>
             </div>
             <div class="six wide right floated column">
                 <img src="/assets/images/visuel-pro-3.jpg" class="ui large image" alt="professionnel qualifiés" title="professionnel qualifiés">
@@ -690,7 +713,7 @@ h3.ui.header{
           <div class="text-center">Guadeloupe</div>
         </div>
         <div class="one wide right floated column" style="padding-right: 0rem;">
-            <img src="/assets/images/tick-testimony.png" class="ui large image">
+            <img src="/assets/images/tick-testimony.png" class="ui large image hidden-sm">
         </div>
         <div class="eleven wide column bg-orange-light p-20">
           <div class="wrapper-testimony">

@@ -68,12 +68,22 @@
   font-family: 'Playfair Display', serif!important;
   font-weight:900!important;
 }
+
+
 .logo{
   float: left;
   margin-left: 20px;
 }
 
-.meta{height:20px;}
+.meta{height:20px;
+  overflow: hidden;
+  text-overflow: ellipsis;}
+
+.category{
+  height:40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 h1{ 
   font-family: 'Playfair Display', serif!important;
@@ -110,6 +120,10 @@ h3.ui.header{
   font-weight:600;
 }
 
+.ui.secondary.pointing.menu .item{
+  padding:10px;
+}
+
 
 .ui.form .fields{
   margin: 0!important;
@@ -144,6 +158,7 @@ h3.ui.header{
   background:#0099a8!important;
   color:#FFF!important;
   font-size: 1.2em;
+  line-height: 1.2rem;
 }
 
 .ui.inverted.button{
@@ -227,7 +242,7 @@ h3.ui.header{
 
 .leaf-deco{
   height:220px;
-  background-image: url('../assets/images/leaf-1.jpg'), url('../assets/images/leaf-2.jpg'); 
+  background-image: url('../assets/images/leaf-1.png'), url('../assets/images/leaf-2.png'); 
   background-position: bottom right, bottom left;
   background-repeat: no-repeat; 
 }
@@ -251,6 +266,8 @@ h3.ui.header{
   background-size: cover!important; /* version standardisée */
   height:180px;
   width:100%;
+  background-position:center center;
+  background-repeat:no-repeat;
 }
 
 .picture-artisan-default{
@@ -460,6 +477,12 @@ h3.ui.header{
       margin-bottom: 2em;
     }    
 
+    @media only screen and (max-width: 768px) {
+      .ui.massive.rating{
+        font-size: 1.3rem!important;
+      }
+    }
+
     @media only screen and (max-width: 700px) {
       .ui.fixed.menu {
         display: none !important;
@@ -476,7 +499,7 @@ h3.ui.header{
       }
       .masthead h1.ui.header {
         font-size: 2em;
-        margin-top: 1.5em;
+        margin-top: 1em;
       }
       .masthead h2 {
         margin-top: 0.5em;
@@ -484,7 +507,16 @@ h3.ui.header{
       }    
 
       .hidden-sm{
-        display:none;
+        display:none!important;
+      }
+
+      .mt-10-sm{
+        margin-top:10px!important;
+      }
+
+      .logo{
+        float:right;
+        margin-right:15px;
       }
  
     }
@@ -526,11 +558,11 @@ h3.ui.header{
     <div class="ui inverted vertical masthead center aligned segment jumbotron bg-HP">
       <a href="#" class="logo"><img src="/assets/images/logo.png" alt="weKay" title="weKay"></a> 
       <div class="ui large inverted pointing secondary menu">
-        <a class="toc item">
+      <a class="toc item">
           <i class="sidebar icon"></i>
-        </a>
+        </a>       
         <div class="ui fluid container">
-          <a class="right item">Demander un devis</a>
+          <a class="item right">Demander un devis</a>
           <a class="item">Trouver un professionnel</a>
           <a class="item">Comment ça marche</a>
           <a class="item" href="/#">Se connecter</a>
@@ -540,34 +572,34 @@ h3.ui.header{
         </div>
       </div>
       <div class="ui text">
-          <h1 class="ui inverted header">Vous souhaitez réaliser des travaux ?</h1>
-          <h2 class="ui inverted header">Nous trouvons le professionnel qu'il vous faut !</h2>
-      
-          <form class="ui large form dd-cta-form">
-            <div class="fields">
-              <div class="field">
-                <div name="project" role="listbox" aria-expanded="false" class="ui selection dropdown" tabindex="0" style="width: 350px;">
-                  <div class="default text" role="alert" aria-live="polite">Quel projet souhaitez vous réaliser ?</div>
-                  <i aria-hidden="true" class="dropdown icon"></i>
-                  <div class="menu transition">
-                    <div role="option" aria-checked="false" aria-selected="true" class="selected item" style="pointer-events: all;">
-                      <span class="text">Architecture - Expertise</span>
-                    </div>
-                    <div role="option" aria-checked="false" aria-selected="false" class="item" style="pointer-events: all;">
-                      <span class="text">Assainissement - Terrassement</span>
-                    </div>
-                    <div role="option" aria-checked="false" aria-selected="false" class="item" style="pointer-events: all;">
-                      <span class="text">Construction - Extension</span>
-                    </div>
-                    <div role="option" aria-checked="false" aria-selected="false" class="item" style="pointer-events: all;">
-                      <span class="text">Rénovation complète</span>
-                    </div>
+        <h1 class="ui inverted header">Vous souhaitez réaliser des travaux ?</h2>
+        <h2 class="ui inverted header">Nous trouvons le professionnel qu'il vous faut !</h2>
+
+        <form class="ui large form dd-cta-form">
+          <div class="fields">
+            <div class="field center-block">
+              <div name="project" role="listbox" aria-expanded="false" class="ui selection dropdown" tabindex="0">
+                <div class="default text" role="alert" aria-live="polite">Quel projet souhaitez vous réaliser ?</div>
+                <i aria-hidden="true" class="dropdown icon"></i>
+                <div class="menu transition">
+                  <div role="option" aria-checked="false" aria-selected="true" class="selected item" style="pointer-events: all;">
+                    <span class="text">Architecture - Expertise</span>
+                  </div>
+                  <div role="option" aria-checked="false" aria-selected="false" class="item" style="pointer-events: all;">
+                    <span class="text">Assainissement - Terrassement</span>
+                  </div>
+                  <div role="option" aria-checked="false" aria-selected="false" class="item" style="pointer-events: all;">
+                    <span class="text">Construction - Extension</span>
+                  </div>
+                  <div role="option" aria-checked="false" aria-selected="false" class="item" style="pointer-events: all;">
+                    <span class="text">Rénovation complète</span>
                   </div>
                 </div>
               </div>
-              <a class="ui primary large button" role="button" href="/devis">Demander un devis</a>
             </div>
-          </form>
+            <a class="ui primary large button center-block mt-10-sm" role="button" href="/devis">Demander un devis</a>
+          </div>
+        </form>
       </div>
     </div>
 
@@ -716,15 +748,15 @@ h3.ui.header{
       </div>
       <div class="three column row" style="padding: 2em 0em;">
         <div class="center aligned column">
-            <div class="wrapper-icone"><img src="/assets/images/icone-reason-1.png"  class="mt-20"></div>
+            <div class="wrapper-icone"><img src="/assets/images/icone-reason-1.png"  class="mt-20" alt="conseiller weKay" title="conseiller weKay"></div>
           <p class="white  text-uppercase mt-20" style="font-size: 1.2em; padding: 0em 1.5em;">Des conseillers WeKay <br> à votre service</p>
         </div>
         <div class="center aligned column">
-            <div class="wrapper-icone"><img src="/assets/images/icone-reason-2.png"  class="mt-20"></div>
+            <div class="wrapper-icone"><img src="/assets/images/icone-reason-2.png"  class="mt-20" alt="artisans qualifiés" title="artisans qualifiés"></div>
           <p class="white  text-uppercase mt-20" style="font-size: 1.2em; padding: 0em 1.5em;">Des artisans qualifiés</p>
         </div>
         <div class="center aligned column">
-          <div class="wrapper-icone"><img src="/assets/images/icone-reason-3.png"  class="mt-20"></div>
+          <div class="wrapper-icone"><img src="/assets/images/icone-reason-3.png"  class="mt-20" alt="paiement sécurisé" title="paiement sécurisé"></div>
           <p class="white text-uppercase mt-20" style="font-size: 1.2em; padding: 0em 1.5em;">Un paiement sécurisé qui vous assure des travaux de qualité</p>
         </div>
       </div>
@@ -746,7 +778,7 @@ h3.ui.header{
           <div class="text-center">Guadeloupe</div>
           </div>
           <div class="one wide right floated column" style="padding-right: 0rem;">
-              <img src="/assets/images/tick-testimony.png" class="ui large image">
+              <img src="/assets/images/tick-testimony.png" class="ui large image hidden-sm">
           </div>
           <div class="eleven wide column bg-orange-light p-20">
             <div class="wrapper-testimony">
@@ -764,7 +796,7 @@ h3.ui.header{
     </div>  
 
 <!--Réseau pro-->
-<div class="ui vertical segment bg-map">
+<div class="ui vertical segment bg-map"
   <div class="ui container profile-segment-container">
     <div class="row">
         <div class="column">
@@ -787,8 +819,8 @@ h3.ui.header{
                         </div>
                     </div>
                     <div class="content">
-                      <div class="header text-uppercase blue-light bold">Peintre, Plombier</div>
-                      <div class="meta mt-20">
+                      <div class="header text-uppercase blue-light bold category">Peintre, Plombier</div>
+                      <div class="meta mt-10">
                         <i aria-hidden="true" class="check icon blue-light"></i>Kbis</div>
                       <div class="meta">
                           <i aria-hidden="true" class=""></i></div>
@@ -815,8 +847,8 @@ h3.ui.header{
                         </div>
                     </div>
                     <div class="content">
-                      <div class="header text-uppercase blue-light bold">Rénovation intérieur</div>
-                      <div class="meta mt-20">
+                      <div class="header text-uppercase blue-light bold category">Rénovation intérieur</div>
+                      <div class="meta mt-10">
                         <i aria-hidden="true" class="check icon blue-light"></i>Kbis</div>
                       <div class="meta">
                         <i aria-hidden="true" class="check icon blue-light"></i>Assurance décennale</div>
@@ -843,8 +875,8 @@ h3.ui.header{
                         </div>
                     </div>
                   <div class="content">
-                    <div class="header text-uppercase blue-light bold">Electricien</div>
-                    <div class="meta mt-20">
+                    <div class="header text-uppercase blue-light bold category">Electricien</div>
+                    <div class="meta mt-10">
                       <i aria-hidden="true" class="check icon blue-light"></i>Kbis</div>
                     <div class="meta">
                         <i aria-hidden="true" class=""></i></div>
@@ -871,8 +903,8 @@ h3.ui.header{
                     </div>
                   </div>
                   <div class="content">
-                    <div class="header text-uppercase blue-light bold">Charpentier, Couvreur</div>
-                    <div class="meta mt-20">
+                    <div class="header text-uppercase blue-light bold category">Charpentier, Couvreur</div>
+                    <div class="meta mt-10">
                       <i aria-hidden="true" class="check blue-light icon"></i>Kbis</div>
                     <div class="meta">
                       <i aria-hidden="true" class="check blue-light icon"></i>Assurance décennale</div>
@@ -897,8 +929,8 @@ h3.ui.header{
               </div>
           </div>
         </div>
-      </div> 
-    </div>
+       
+      </div>  
       <!--Article-->
       
       
@@ -942,18 +974,20 @@ h3.ui.header{
                 <div class="column mt-20">
                   <h4 class="ui inverted header">Suivez nous :</h4>
                   <div>
-                    <a href=""><img src="/assets/images/facebook.jpg" class=""></a>
-                    <a href=""><img src="/assets/images/youtube.jpg" class="pl-5"></a>
-                    <a href=""><img src="/assets/images/twitter.jpg" class="pl-5"></a>
-                    <a href=""><img src="/assets/images/google.jpg" class="pl-5"></a>
+                    <a href=""><img src="/assets/images/facebook.jpg" class="" alt="facebook" title="facebook"></a>
+                    <a href=""><img src="/assets/images/youtube.jpg" class="pl-5" alt="you tube" title="you tube"></a>
+                    <a href=""><img src="/assets/images/twitter.jpg" class="pl-5" alt="twitter" title="twitter"></a>
+                    <a href=""><img src="/assets/images/google.jpg" class="pl-5" alt="google plus" title="google plus"></a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
     </div>
+    
+    
   </div>
-
+</div>
 
 <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"

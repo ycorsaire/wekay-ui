@@ -79,7 +79,15 @@
   margin-left: 20px;
 }
 
-.meta{height:20px;}
+.meta{height:20px;
+  overflow: hidden;
+  text-overflow: ellipsis;}
+
+.category{
+  height:40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 h1{ 
   font-family: 'Playfair Display', serif!important;
@@ -188,7 +196,15 @@ h3.ui.header{
   border:0px!important;
 }
 
+.ui.secondary.pointing.menu .item{
+  padding:10px;
+}
 
+.bg-map{
+    background-image:url('../assets/images/visuel-map.jpg')!important;
+    -webkit-background-size: cover!important; /* pour anciens Chrome et Safari */
+    background-size: cover!important; /* version standardisée */
+  }
 
 .arrow{
     position: absolute;
@@ -247,6 +263,8 @@ h3.ui.header{
   background-image:url('../assets/images/exemple-artisan.png')!important;
   -webkit-background-size: cover!important; /* pour anciens Chrome et Safari */
   background-size: cover!important; /* version standardisée */
+  background-position:center center;
+  background-repeat:no-repeat;
   height:180px;
   width:100%;
 }
@@ -259,6 +277,10 @@ h3.ui.header{
   opacity:0.75;
   height:180px;
   width:100%;
+}
+
+.content {
+    padding: 20px;
 }
 
 .name{font-size: 1.4em;
@@ -388,6 +410,12 @@ h3.ui.header{
       font-weight: normal;
     }
 
+    @media only screen and (max-width: 768px) {
+      .ui.massive.rating{
+        font-size: 1.3rem!important;
+      }
+    }
+
     @media only screen and (max-width: 700px) {
       .ui.fixed.menu {
         display: none !important;
@@ -400,8 +428,21 @@ h3.ui.header{
         display: block;
       } 
       
+      .masthead h1.ui.header {
+      margin-top: 0em;
+      }
+
       .hidden-sm{
         display:none!important;
+      }
+
+       .logo{
+        float:right;
+        margin-right:15px;
+      }
+
+      .mt-10-sm{
+        margin-top:10px!important;
       }
     }
 
@@ -436,7 +477,7 @@ h3.ui.header{
 <!-- Page Contents -->
 <div class="pusher">
   <!-- Jumbotron  -->
-    <div class="ui inverted vertical masthead center aligned segment">
+    <div class="ui inverted vertical masthead center aligned segment bg-map">
         <a href="#" class="logo"><img src="/assets/images/logo.png" alt="weKay Pro" title="weKay Pro"></a> 
       <div class="ui large inverted pointing secondary menu">
       <a class="toc item">
@@ -455,20 +496,20 @@ h3.ui.header{
       
 
         <div class="ui text">
-              <h1 class="ui inverted header">Notre réseau de professionnels caribéens<br/>Trouvez le professionnel qu'il vous faut !</h1>
+              <h1 class="ui inverted header">Consultez notre annuaire <br> et trouvez le professionnel qu'il vous faut !</h1>
               <form class="ui large form dd-cta-form">
                   <div class="fields">
-                    <div class="field">
-                      <div name="project" role="listbox" aria-expanded="false" class="ui selection dropdown" tabindex="0" style="width: 300px;">
+                    <div class="field center-block">
+                      <div name="project" role="listbox" aria-expanded="false" class="ui selection dropdown" tabindex="0">
                         <div class="default text" role="alert" aria-live="polite">Quel métier ?</div>
                         <i aria-hidden="true" class="dropdown icon"></i>
                       </div>
-                      <div name="project" role="listbox" aria-expanded="false" class="ui selection dropdown" tabindex="0" style="width: 300px;">
+                      <div name="project" role="listbox" aria-expanded="false" class="ui selection dropdown mt-10-sm" tabindex="0">
                           <div class="default text" role="alert" aria-live="polite">Où ?</div>
                           <i aria-hidden="true" class="dropdown icon"></i>
                         </div>                      
                     </div>
-                    <a class="ui primary large button" role="button" href="/#" onclick="showDevis(event)">Demander un devis</a>
+                    <a class="ui primary large button center-block mt-10-sm" role="button" href="/#" onclick="showDevis(event)">Demander un devis</a>
                   </div>
                 </form>      
        
@@ -482,15 +523,15 @@ h3.ui.header{
     <div class="ui container">
     <div class="row">
             <div class="column">
-                <h3 class="ui center aligned header" style="font-size: 3em;">Consulter nos émissions et conseils<br/> sur l'habitat Caraïbéen</h3>
+                <h3 class="ui center aligned header mt-40" style="font-size: 3em;">Notre réseau de professionnels caribéens</h3>
             </div>
         </div>
       <div class="ui container stackable grid mt-40">
           <p class="font-m text-justify">Grâce à notre connaissance et nos émissions sur l’architecture caribéenne, nous avons tissé au fil du temps un réseau de professionnels du bâtiment qualifiés. <br>
             Aujourd’hui nous souhaitons vous faire profiter de cet annuaire afin que vous trouviez le meilleur pro pour vos travaux.<br>
             Vous pouvez demander directement un devis au professionnel de votre choix en consultant nore annuaire ou nous laisser faire ce travail pour vous en nous décrivant votre projet !<br>
-        </p>          
-          <div class="four column row">
+          </p>          
+          <div class="four column row mt-40">
               <div class="center aligned column">
                   <div class="wrapper-card">
                       <div class="picture-artisan p-20">
@@ -603,7 +644,7 @@ h3.ui.header{
                       <button class="ui primary button center-block mb-20" role="button">Demander un devis</button>
                     </div>
               </div>
-              <div class="center aligned column">
+              <div class="center aligned column mt-40">
                   <div class="wrapper-card">
                       <div class="picture-artisan p-20">
                           <div class="name white text-uppercase bold mt-100">M. Zami</div>
@@ -631,7 +672,7 @@ h3.ui.header{
                       <button class="ui primary button center-block mb-20" role="button">Demander un devis</button>
                     </div>
               </div>                                                  
-              <div class="center aligned column">
+              <div class="center aligned column mt-40">
                   <div class="wrapper-card">
                       <div class="picture-artisan p-20">
                           <div class="name white text-uppercase bold mt-100">M. Zami</div>
@@ -659,7 +700,7 @@ h3.ui.header{
                       <button class="ui primary button center-block mb-20" role="button">Demander un devis</button>
                     </div>
               </div>
-              <div class="center aligned column">
+              <div class="center aligned column mt-40">
                   <div class="wrapper-card">
                       <div class="picture-artisan p-20">
                           <div class="name white text-uppercase bold mt-100">M. Zami</div>
@@ -687,7 +728,7 @@ h3.ui.header{
                       <button class="ui primary button center-block mb-20" role="button">Demander un devis</button>
                     </div>
               </div>              
-              <div class="center aligned column">
+              <div class="center aligned column mt-40">
                     <div class="wrapper-card">
                         <div class="picture-artisan p-20">
                             <div class="name white text-uppercase bold mt-100">M. Zami</div>
@@ -717,7 +758,7 @@ h3.ui.header{
                 </div>                  
             </div>
             <div class="row">
-                <div class="center aligned column mt-40 mb-40">
+                <div class="center aligned column mt-40">
                   <button class="ui primary button" role="button">Voir plus de professionnels</button>
                 </div>
             </div>
@@ -756,7 +797,7 @@ h3.ui.header{
         <div class="ui container">
         <div class="row">
                 <div class="column">
-                    <h3 class="ui center aligned header" style="font-size: 3em;">Consulter nos émissions et conseils<br/> sur l'habitat Caraïbéen</h3>
+                    <h3 class="ui center aligned header mt-40" style="font-size: 3em;">Consulter nos émissions et conseils<br/> sur l'habitat Caraïbéen</h3>
                 </div>
             </div>
           <div class="ui container stackable grid mt-40">              
@@ -770,8 +811,8 @@ h3.ui.header{
                               </div>
                           </div>
                           <div class="content">
-                            <div class="header text-uppercase blue-light bold">Peintre, Plombier</div>
-                            <div class="meta mt-20">
+                            <div class="header text-uppercase blue-light bold category">Peintre, Plombier</div>
+                            <div class="meta mt-10">
                               <i aria-hidden="true" class="check icon blue-light"></i>Kbis</div>
                             <div class="meta">
                                 <i aria-hidden="true" class=""></i></div>
@@ -798,8 +839,8 @@ h3.ui.header{
                               </div>
                           </div>
                           <div class="content">
-                            <div class="header text-uppercase blue-light bold">Rénovation intérieur</div>
-                            <div class="meta mt-20">
+                            <div class="header text-uppercase blue-light bold category">Rénovation intérieur</div>
+                            <div class="meta mt-10">
                               <i aria-hidden="true" class="check icon blue-light"></i>Kbis</div>
                             <div class="meta">
                               <i aria-hidden="true" class="check icon blue-light"></i>Assurance décennale</div>
@@ -826,8 +867,8 @@ h3.ui.header{
                                 </div>
                             </div>
                             <div class="content">
-                              <div class="header text-uppercase blue-light bold">Rénovation intérieur</div>
-                              <div class="meta mt-20">
+                              <div class="header text-uppercase blue-light bold category">Rénovation intérieur</div>
+                              <div class="meta mt-10">
                                 <i aria-hidden="true" class="check icon blue-light"></i>Kbis</div>
                               <div class="meta">
                                 <i aria-hidden="true" class="check icon blue-light"></i>Assurance décennale</div>

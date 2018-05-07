@@ -34,6 +34,7 @@
 .mt-200{margin-top:200px!important;}
 .mb-20{margin-bottom:20px!important;}
 .mb-40{margin-bottom:40px!important;}  
+.mr-20{margin-right:20px!important;}
 .pl-5{padding-left:5px;}
 .pl-40{padding-left:40px!important;}
 .pr-40{padding-right:40px!important;}
@@ -82,7 +83,9 @@
   margin-left: 20px;
 }
 
-.meta{height:20px;}
+.meta{height:20px;
+  overflow: hidden;
+  text-overflow: ellipsis;}
 
 h1{ 
   font-family: 'Playfair Display', serif!important;
@@ -422,10 +425,19 @@ h3.ui.header{
   padding:15px!important;
 }
 
+.field-radio:hover{
+  border: 1px solid #f6a015;
+  background-color: #f6a015;
+}
+
+.ui.form .fields>.field-radio:hover label{
+  color:#FFF!important;
+}
+
 .ui.form .fields>.field-radio.select{
   border: 1px solid #f6a015;
   padding:15px!important;
-  background-color: #f6a015;;
+  background-color: #f6a015;
 }
 
 .ui.form .fields>.field-radio.select label{
@@ -481,7 +493,6 @@ input{
   height:55px;
   width:55px;
 }
-
 
 
 .bg-HP{
@@ -697,6 +708,16 @@ input{
   transition: box-shadow 0.3s ease-in-out;
 }
 
+.cache-part-devis{
+  position:fixed;
+  top:0px;
+  left:0px;
+  bottom: 0px;
+  right: 0px;
+  z-index:100;
+  background-color:rgba(255,255,255, 0.7);
+}
+
 .content{padding:20px;}
     .hidden.menu {
       display: none;
@@ -767,6 +788,12 @@ input{
       margin-bottom: 2em;
     }    
 
+    @media only screen and (max-width: 768px) {
+      .ui.massive.rating{
+        font-size: 1.3rem!important;
+      }
+    }
+
     @media only screen and (max-width: 700px) {
       .ui.fixed.menu {
         display: none !important;
@@ -793,15 +820,21 @@ input{
       .hidden-sm{
         display:none;
       }
+
+       .logo{
+        float:right;
+        margin-right:15px;
+      }
  
     }
 
 
   </style>
-
 </head>
 <body>
-    <div class="ui container mt-100">
+    <div class="cache-part-devis"></div>
+    <div class="row text-right mt-20 mr-20"><img src="/assets/images/close.png" alt="Fermer" title="Fermer"></div>
+    <div class="ui container mt-40">
         <h3 class="blue-light font-l font-title"> <div class="ui bg-blue huge circular label-number">1</div> Dans quel domaine souhaitez-réaliser des travaux ?</h3>
           <div class="ui stackable grid mt-80">
               <div class="four column row" style="padding:0em;">
@@ -1008,7 +1041,6 @@ input{
           </div>
         </div>              
       </div>
-    
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="

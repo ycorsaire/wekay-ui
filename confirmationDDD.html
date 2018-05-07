@@ -33,6 +33,7 @@
 .mt-200{margin-top:200px!important;}
 .mb-20{margin-bottom:20px!important;}
 .mb-40{margin-bottom:40px!important;}  
+.ml-20{margin-left:20px!important;}  
 .pl-5{padding-left:5px;}
 .pl-40{padding-left:40px!important;}
 .pr-40{padding-right:40px!important;}
@@ -59,7 +60,8 @@
 .text-uppercase{text-transform:uppercase;}
 .text-italic{font-style:italic;}
 .text-right{text-align:right;}
-.text-center{text-align:center;}
+.text-left{text-align:left;}
+.text-center{text-align:center!important;}
 .text-justify{text-align:justify;}
 .bold{font-weight:bold;}
 .white{color:#FFF!important;}
@@ -79,7 +81,15 @@
   margin-left: 20px;
 }
 
-.meta{height:20px;}
+.meta{height:20px;
+  overflow: hidden;
+  text-overflow: ellipsis;}
+
+.category{
+  height:40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 h1{ 
   font-family: 'Playfair Display', serif!important;
@@ -115,6 +125,13 @@ h3.ui.header{
   color:#FFF!important; 
   font-weight:600;
 }
+
+.bg-confirmation{
+  background-image:url('../assets/images/visuel-confirmation.jpg')!important;
+  -webkit-background-size: cover!important; /* pour anciens Chrome et Safari */
+  background-size: cover!important; /* version standardisée */
+  }
+
 
 
 .ui.form .fields{
@@ -188,7 +205,9 @@ h3.ui.header{
   border:0px!important;
 }
 
-
+.ui.secondary.pointing.menu .item{
+  padding:10px;
+}
 
 .arrow{
     position: absolute;
@@ -225,7 +244,7 @@ h3.ui.header{
 
 .leaf-deco{
   height:220px;
-  background-image: url('../assets/images/leaf-1.jpg'), url('../assets/images/leaf-2.jpg'); 
+  background-image: url('../assets/images/leaf-1.png'), url('../assets/images/leaf-2.png'); 
   background-position: bottom right, bottom left;
   background-repeat: no-repeat; 
 }
@@ -247,6 +266,8 @@ h3.ui.header{
   background-image:url('../assets/images/exemple-artisan.png')!important;
   -webkit-background-size: cover!important; /* pour anciens Chrome et Safari */
   background-size: cover!important; /* version standardisée */
+  background-position:center center;
+  background-repeat:no-repeat;
   height:180px;
   width:100%;
 }
@@ -316,7 +337,7 @@ h3.ui.header{
     }
 
     .ui.vertical.stripe {
-      padding: 8em 0em;
+      padding: 4em 0em 0em 0em;
     }
     .ui.vertical.stripe h3 {
       font-size: 2em;
@@ -371,6 +392,19 @@ h3.ui.header{
         margin-bottom: 1em !important;
     }
 
+    @media only screen and (max-width: 767px) {
+      .ui.massive.rating{
+        font-size: 1.3rem!important;
+      }
+      .mt-sm-0{
+        margin-top:0px!important;
+      }
+
+      .ui.stackable.grid>.row>.column, .ui.stackable.grid>.row>.wide.column{
+        margin: 0 10px 20px 10px!important; 
+      } 
+    }
+
     @media only screen and (max-width: 700px) {
       .ui.fixed.menu {
         display: none !important;
@@ -386,6 +420,13 @@ h3.ui.header{
       .hidden-sm{
         display:none!important;
       }
+
+       .logo{
+        float:right;
+        margin-right:15px;
+      }
+
+      
     }
 
 
@@ -419,7 +460,7 @@ h3.ui.header{
 <!-- Page Contents -->
 <div class="pusher">
   <!-- Jumbotron  -->
-    <div class="ui inverted vertical center aligned segment">
+    <div class="ui inverted vertical center aligned segment bg-confirmation">
         <a href="#" class="logo"><img src="/assets/images/logo.png" alt="weKay Pro" title="weKay Pro"></a> 
       <div class="ui large inverted pointing secondary menu">
       <a class="toc item">
@@ -435,26 +476,28 @@ h3.ui.header{
             </div>
         </div>
       </div>
-      <div class="ui fluid container">
 
-          <div class="ui two column grid mt-80">
-              <div class="ui text">
-                    <h1 class="ui inverted header">Merci pour votre confiance. <br/>nous avons bien reçu <br/> votre demande de devis</h1>
-              </div>
-              <div class="ui segment">
-                <p>
-                    Votre demande de devis est enregistrée sous la référence: <br/>
-                    N° 565665 <br/>
-                    Vous allez recevoir un email récapitulant les informations de votre demande de devis. <br/>
-                    Si vous désirez la modifier, connectez-vous sur votre espace personnel.
-                </p>
-                <a class="ui primary button" role="button" href="#">Se connecter</a>
-              </div>
+      <div class="ui vertical stripe segment">
+      <div class="ui middle aligned stackable grid container">
+        <div class="row">
+          <div class="ui text seven wide left floated column">
+                <h1 class="ui inverted header text-left ml-20 mb-40  mt-sm-0"><span class="hidden-sm">Merci pour votre confiance.</span> Nous avons bien reçu votre demande de devis !</h1>
           </div>
-
+          <div class="ui segment mb-40 seven wide column mx-10-sm">
+            <p class="bold mt-20 font-m">Votre demande de devis est enregistrée sous la référence:</p>
+            <p class="text-center"><span class="blue-light font-l bold mt-20"> N° 565665</span> </p>
+            <p class="text-left font-m">
+                Vous allez recevoir un email récapitulant les informations de votre demande de devis. 
+            </p>
+            <p class="text-left font-m">
+                Si vous désirez la modifier, connectez-vous sur votre espace personnel.
+            </p>
+            <a class="ui primary button mb-20 mt-20" role="button" href="#">Se connecter</a>
+          </div>
+        </div>
       </div>
-
     </div>
+  </div>
 
 <!-- Prochaine étapes -->
 <div class="ui vertical stripe segment">
@@ -464,76 +507,86 @@ h3.ui.header{
                 <h3 class="ui center aligned header" style="font-size: 3em;">Quelles sont les prochaines étapes ?</h3>
             </div>
         </div>
-        <div class="row">
-            <div class="three wide left floated column">
-                <img src="/assets/images/testimony-2.png" class="ui large rounded image">
+        <div class="row mt-20">
+            <div class="six wide left floated column">
+                <img src="/assets/images/visuel-confirmation-1.png" class="ui large rounded image" alt="conseiller WeKay" title="conseiller WeKay">
             </div>
-            <div class="eleven wide column">
+            <div class="height wide column">
                 <div>
-                    <div>1</div>
-                    <div>
-                        <p>Votre demande est validée par un conseiller WeKay
-                            <br/> Vous allez être contacté par un conseiller WeKay pour valider et compléter si nécessaire votre
-                            demande de devis. Nous souhaitons comprendre au mieux votre demande afin de trouver l'artisan
-                            dont vous avez besoin.
-                        </p>
-                    </div>
+                    <div class="ui huge circular label-number bg-blue text-center center-block">1</div>
+                    <h4 class="font-l bold">Votre demande est validée par un conseiller WeKay</h4>
+                    <p>
+                        <span class="bold">Vous allez être contacté par un conseiller WeKay</span> pour valider et compléter si nécessaire votre
+                        demande de devis. Nous souhaitons comprendre au mieux votre demande afin de trouver l'artisan
+                        dont vous avez besoin.
+                    </p>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="eleven wide column">
+          <div class="center aligned column">
+            <img src="/assets/images/arrow-down.png" alt="suivant" title="suivant">
+          </div>
+        </div>
+        <div class="row">
+          <div class="height wide column">
+              <div>
+                  <div class="ui huge circular label-number bg-blue text-center center-block">2</div>
+                  <h4 class="font-l bold">Votre demande est transmise à des professionnels qualifiés</h4>            
+                  <p> Nous transmettons votre demande à 5 artisans correspondants aux critères de votre demande de devis.
+                      <span class="bold">Ceux-ci vous contacterons afin de réaliser avec précision leur demande de devis.</span>
+                  </p>
+              </div>
+          </div>
+          <div class="six wide right floated column">
+              <img src="/assets/images/visuel-confirmation-2.png" class="ui large rounded image" alt="des professionnels qualifiés" title="des professionnels qualifiés">
+          </div>
+        </div>
+        <div class="row">
+          <div class="center aligned column">
+            <img src="/assets/images/arrow-down.png" alt="suivant" title="suivant">
+          </div>
+        </div>
+        <div class="row">
+            <div class="six wide left floated column">
+                <img src="/assets/images/visuel-confirmation-3.png" class="ui large rounded image" alt="Vous recevez des devis" title="Vous recevez des devis">
+            </div>
+            <div class="height wide column">
                 <div>
-                    <div>2</div>
-                    <div>
-                        <p>Votre demande est transmise à des professionnels qualifiés
-                            <br/> Nous transmettons votre demande à 5 artisans correspondants aux critères de votre demande de devis.
-                            Ceux-ci vous contacterons afin de réaliser avec précision leur demande de devis.
+                    <div class="ui huge circular label-number bg-blue text-center center-block">3</div>
+                    <h4 class="font-l bold">Vous recevez des devis et faites votre choix.</h4>
+                    <p>
+                    Vous recevez des devis (au maximum 5 demandes). Une fois votre choix réalisé, <span class="bold">vous validez votre choix sur WeKay
+                    en versant un acompte</span> actant le début des travaux.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="center aligned column">
+            <img src="/assets/images/arrow-down.png" alt="suivant" title="suivant">
+          </div>
+        </div>
+        <div class="row">
+            <div class="height wide column">
+                <div>
+                    <div class="ui huge circular label-number bg-blue text-center center-block">4</div>
+                    <h4 class="font-l bold">Vos travaux sont réalisés !</h4>
+                        <p>
+                          Le professionnel réalise vos travaux. Une fois ceux-ci terminés,
+                          <span class="bold">vous réglez en toute sécurité le reste du montant du chantier sur WeKay.</span>
                         </p>
-                    </div>
                 </div>
             </div>
-                <div class="three wide right floated column">
-                    <img src="/assets/images/testimony-2.png" class="ui large rounded image">
-                </div>
+            <div class="six wide right floated column">
+                <img src="/assets/images/visuel-confirmation-4.png" class="ui large rounded image" alt="Vos travaux sont réalisés" title="Vos travaux sont réalisés">
             </div>
-            <div class="row">
-                    <div class="three wide left floated column">
-                        <img src="/assets/images/testimony-2.png" class="ui large rounded image">
-                    </div>
-                    <div class="eleven wide column">
-                        <div>
-                            <div>3</div>
-                            <div>
-                            <p>Vous recevez des devis et faites votre choix.
-                                    <br/> Vous recevez des devis (au maximum 5 demandes). Une fois votre choix réalisé, vous validez votre choix sur WeKay
-                                    en versant un acompte actant le début des travaux.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="eleven wide column">
-                        <div>
-                            <div>4</div>
-                            <div>
-                                <p>Vos travaux sont réalisés !
-                                    <br/> Le professionnel réalise vos travaux. Une fois ceux-ci terminés,
-                                    vous réglez en toute sécurité le reste du montant du chantier sur WeKay.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="three wide right floated column">
-                        <img src="/assets/images/testimony-2.png" class="ui large rounded image">
-                    </div>
-                </div>
-                <div class="row">
-                        <div class="center aligned column">
-                          <button class="ui inverted primary button" role="button">Déposer une nouvelle demande de devis</button>
-                        </div>
-                </div>
+        </div>
+        <div class="row">
+          <div class="center aligned column">
+            <button class="ui inverted primary button" role="button">Déposer une nouvelle demande de devis</button>
+          </div>
+        </div>
     </div>
 </div>
 <div class="leaf-deco"></div>
@@ -568,7 +621,7 @@ h3.ui.header{
         <div class="ui container">
         <div class="row">
                 <div class="column">
-                    <h3 class="ui center aligned header" style="font-size: 3em;">Consulter nos émissions et conseils<br/> sur l'habitat Caraïbéen</h3>
+                    <h3 class="ui center aligned header mt-40" style="font-size: 3em;">Consulter nos émissions et conseils<br/> sur l'habitat Caraïbéen</h3>
                 </div>
             </div>
           <div class="ui container stackable grid mt-40">              

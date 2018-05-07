@@ -33,6 +33,7 @@
 .mt-200{margin-top:200px!important;}
 .mb-20{margin-bottom:20px!important;}
 .mb-40{margin-bottom:40px!important;}  
+.ml-10{margin-left:10px!important;}
 .pl-5{padding-left:5px;}
 .pl-40{padding-left:40px!important;}
 .pr-40{padding-right:40px!important;}
@@ -49,9 +50,12 @@
 .bg-orange-light{ background-color:#ffc871!important;}
 .bg-blue-dark{background-color:#1f3b47!important;}
 .bg-grey{background-color:#f4f4f4;}
+.bg-white{background-color:#FFF!important;}
 
 .border-orange-light{border-top:40px solid #ffc871!important;}
 
+.d-inline{display:inline-block;}
+.float-right{float:right;}
 .center-block{
   margin-left:auto!important; 
   margin-right:auto!important;
@@ -68,9 +72,10 @@
 .blue-dark{color:#076f79!important;}
 .blue-medium{color:#076f79!important;}
 .blue-light{color:#0099a8!important;}
-.font-m{font-size:1.2em;}
+.font-m{font-size:1.2em!important;}
 .font-l{font-size:30px;}
 .font-xl{font-size:40px;}
+.font-xxl{font-size:50px;}
 .font-title{
   font-family: 'Playfair Display', serif!important;
   font-weight:900!important;
@@ -80,31 +85,43 @@
   margin-left: 20px;
 }
 
-.meta{height:20px;}
+.meta{height:20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  }
 
-h1{ 
-  font-family: 'Playfair Display', serif!important;
-  font-weight:900!important;}
+.category{
+  height:40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 
 h1.ui.header{ 
-  font-family: 'Playfair Display', serif!important;
   font-weight:900!important;
-  font-size:50px!important;
+  font-size:36px!important;
   }
 
 h2.ui.header{ 
-  font-family: 'Playfair Display', serif!important;
   font-weight:900!important;
-  font-size:50px!important;
-  margin:0px!important;
+  font-size:30px!important;
+  margin:0px 10px!important;
   }
 
 h3.ui.header{ 
-  font-family: 'Playfair Display', serif!important;
-  font-weight:900!important;
-  font-size:50px!important;
+  font-size:30px!important;
   color:#303030;
+  font-weight:300;
   }
+
+  h3.ui.header.font-xxl{ 
+  font-size:50px!important;
+  font-weight:300;
+  }
+
+.ui.segment{
+  padding: 2em 2em;
+}
 
 .form.dd-cta-form{
   background-color:rgba(0, 153, 168, 0.5)!important;
@@ -189,7 +206,9 @@ h3.ui.header{
   border:0px!important;
 }
 
-
+.ui.secondary.pointing.menu .item{
+  padding:10px;
+}
 
 .arrow{
     position: absolute;
@@ -197,6 +216,27 @@ h3.ui.header{
     margin-top: 50px;
   }
 
+.nb-chantier, .nb-recommandation{
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: -15px;
+    vertical-align: middle;
+}  
+
+.nb-recommandation a{
+  color:#303030;
+}
+
+.icon-reco{
+  background-image:url('../assets/images/recommandation.png')!important;
+  background-position: center center;
+  background-repeat: no-repeat; 
+  width:22px;
+  height:21px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
 
 .label-number{
   color:white;
@@ -206,10 +246,24 @@ h3.ui.header{
   width:50px;
   height:50px;
   border-radius: 50px;
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 10px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+}
+
+.arrow-white{
+  background-image:url('../assets/images/arrow-return.png')!important;
+  background-position: center center;
+  background-repeat: no-repeat; 
+  width:7px;
+  height:12px;
+  display:inline-block;
+  margin-right:10px;
+}
+
+a.return{
+  color:white;
 }
 
 .wrapper-icone{
@@ -226,7 +280,7 @@ h3.ui.header{
 
 .leaf-deco{
   height:220px;
-  background-image: url('../assets/images/leaf-1.jpg'), url('../assets/images/leaf-2.jpg'); 
+  background-image: url('../assets/images/leaf-1.png'), url('../assets/images/leaf-2.png'); 
   background-position: bottom right, bottom left;
   background-repeat: no-repeat; 
 }
@@ -236,6 +290,30 @@ h3.ui.header{
   background-position: top left, bottom right;
   background-repeat: no-repeat; 
 }
+
+.ui.comments .comment .avatar{
+    display: block;
+    width: 3em;
+    height:3em;
+    float: left;
+    margin: 20px 0px;
+    background-color:#00b5ad;
+    border-radius:50%;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top:17px;
+}
+
+.avatar-1{
+  background-image:url('../assets/images/exemple-artisan.png')!important;
+  background-position: center center;
+  background-repeat: no-repeat; 
+  -webkit-background-size: cover!important; /* pour anciens Chrome et Safari */
+  background-size: cover!important; /* version standardisée */
+}
+
 
 .ui.vertical.stripe p {
     font-size: 1.2em!important;
@@ -248,6 +326,8 @@ h3.ui.header{
   background-image:url('../assets/images/exemple-artisan.png')!important;
   -webkit-background-size: cover!important; /* pour anciens Chrome et Safari */
   background-size: cover!important; /* version standardisée */
+  background-position:center center;
+  background-repeat:no-repeat;
   height:180px;
   width:100%;
 }
@@ -275,6 +355,59 @@ h3.ui.header{
   margin-right: 5px;
 }
 
+.img-chantier{
+  background-position: center center;
+  background-repeat: no-repeat; 
+  -webkit-background-size: cover!important; /* pour anciens Chrome et Safari */
+  background-size: cover!important; /* version standardisée */
+  width:100%;
+  height:340px;
+}
+
+.img-chantier-1{background-image:url('../assets/images/travaux-1.jpg')!important;}
+.img-chantier-2{background-image:url('../assets/images/travaux-2.jpg')!important;}
+.img-chantier-3{background-image:url('../assets/images/travaux-3.jpg')!important;}
+
+.label{
+  background-position: center center;
+  background-repeat: no-repeat; 
+  width:100%;
+  height:240px;
+} 
+
+.label-1{
+  background-image:url('../assets/images/label.jpg')!important;
+} 
+
+
+.ui.comments{
+ max-width:none;
+}
+
+.author{
+  font-size:18px!important;
+}
+
+.ui.comments .comment .metadata{
+  margin-left:0px!important;
+  font-size:14px!important;
+  margin-top:5px;
+}
+
+.ui.comments .comment{
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 20px;
+}
+
+.ui.comments .comment:nth-last-child(1){
+  border-bottom: 1px solid #FFF;
+}
+
+.ui.comments .comment .text{
+  margin-top:20px;
+}
+
+
 .ui.card .meta, .ui.cards>.card .meta, .ui.card>.content>.description, .ui.cards>.card>.content>.description{
   color: #303030; 
 }
@@ -287,6 +420,10 @@ h3.ui.header{
 .ui.form input[type=email]{
   border-radius:0px!important;
   width: auto;
+}
+
+.content {
+    padding: 20px;
 }
 
 
@@ -357,7 +494,6 @@ h3.ui.header{
     }
     .profile-segment-container {
       margin-top: 2em;
-      margin-bottom: 2em;
     }
 
     .jumbotron {
@@ -379,7 +515,7 @@ h3.ui.header{
 }
 
 .pro-summary {
-    padding-top: 5em;;
+    padding-top: 3em;;
     background-color: darkslategrey;
 }
 
@@ -394,11 +530,15 @@ h3.ui.header{
 }
 
 .pro-summary-avatar {
-    padding: 0 !important;
+  background-image:url('../assets/images/exemple-artisan.png')!important;
+  -webkit-background-size: cover!important; /* pour anciens Chrome et Safari */
+  background-size: cover!important; /* version standardisée */
+  padding: 0 !important;
+  background-position:center center;
+  background-repeat:no-repeat;
 }
 
 .pro-summary-action {
-    position: absolute;
     text-align: center;
     bottom:0px;
     width: 100%;
@@ -411,9 +551,15 @@ h3.ui.header{
 .pro-summary-heart {
     position: absolute;
     cursor: pointer;
-    top: 10px;
+    top: 20px;
     right: 20px;
 }
+
+@media only screen and (max-width: 768px) {
+      .ui.massive.rating{
+        font-size: 1.3rem!important;
+      }
+    }
 
     @media only screen and (max-width: 700px) {
       .ui.fixed.menu {
@@ -429,6 +575,19 @@ h3.ui.header{
       
       .hidden-sm{
         display:none!important;
+      }
+
+       .logo{
+        float:right;
+        margin-right:15px;
+      }
+
+       .rating.float-right{
+        float:none;
+      }
+
+      .bt-reco.float-right{
+        float:none;
       }
     }
 
@@ -457,37 +616,40 @@ h3.ui.header{
     </div>
     <div class="pro-summary-wrapper">
       <div class="pro-summary">
+        <div class="ui container white mb-20"><span class="arrow-white"></span><a href="" class="return">Retour aux réultats de votre recherche</a></div>
         <div class="ui container">
           <div class="ui grid pro-summary-details">
             <div class="six wide column pro-summary-avatar">
-              <img src="/assets/images/exemple-artisan.png" class="ui image">
+             
             </div>
-            <div class="ten wide column">
+            <div class="ten wide column font-m">
               <h2 class="ui header">M. ZAMI</h2>
               <h2 class="ui teal header pro-summary-skills">Charpentier / Couvreur</h2>
               <div class="pro-summary-heart">
                 <i aria-hidden="true" class="teal heart outline big icon"></i>
               </div>
-              <div role="list" class="ui list">
+              <div role="list" class="ui list mt-20 ml-10">
                 <div role="listitem" class="item">Entreprise BATI TOU (créé en 2019)</div>
                 <div role="listitem" class="item">
                   <i aria-hidden="true" class="home disabled icon"></i> Martinique, Fort de France </div>
               </div>
-              <div role="list" class="ui list">
+              <div role="list" class="ui list mt-20 ml-10">
                 <div role="listitem" class="item">
                   <i aria-hidden="true" class="check disabled icon"></i> KBis</div>
                 <div role="listitem" class="item">
                   <i aria-hidden="true" class="check disabled icon"></i> Assurance décennale</div>
               </div>
-              <div class="ui star massive rating" role="radiogroup">
+              <div class="ui star massive rating mt-20 ml-10" role="radiogroup">
                 <i aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
                 <i aria-checked="false" aria-posinset="2" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
                 <i aria-checked="true" aria-posinset="3" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
                 <i aria-checked="false" aria-posinset="4" aria-setsize="5" class="icon" tabindex="0" role="radio"></i>
                 <i aria-checked="false" aria-posinset="5" aria-setsize="5" class="icon" tabindex="0" role="radio"></i>
               </div>
+              <div class="nb-chantier"><span class="bold font-m">5</span> chantiers</div>
+              <div class="nb-recommandation"><a href=""><span class="icon-reco"></span><span class="bold font-m">2</span> recommandations</a></div>
               <div class="pro-summary-action">
-                <button class="ui primary large button" role="button">Demander un devis</button>
+                <button class="ui primary large button mt-20" role="button">Demander un devis</button>
               </div>
             </div>
           </div>
@@ -500,12 +662,12 @@ h3.ui.header{
 
       <!-- Pro présentation -->
       <div class="ui container pro-description-container">
-        <div class="ui segment">
-          <h3 class="ui header">Charpentier / couvreur: </h3>
+        <div class="ui segment font-m">
+          <h3 class="ui header">Charpentier / couvreur : </h3>
           <p>Spécialiste de la structure de toit, le charpentier crée la charpente de toit, élément indispensable de la maison.
             Il doit effectuer le calcul de charges et préparer l'épure. Charpente traditionnelle, fermette ou encore métallique,
             il vous conseille sur le choix à prendre.</p>
-          <h3 class="ui header">L'entreprise et l'activité de M. ZAMI: </h3>
+          <h3 class="ui header">L'entreprise et l'activité de M. ZAMI : </h3>
           <p>Petite entreprise général de bâtiment, nous évoluons autant dans le neuf que dans la rénovation. Nous sommes autonomme
             des fondations, au dernier coup de pinceau. No références, nous sommes partenaire Camif Habitat, Leroy Merlin et
             Castorama. Ce sont nos clients qui en parlent le mieux, 35 ans d'expérience.</p>
@@ -516,16 +678,16 @@ h3.ui.header{
       <!-- Photos de chantiers -->
       <div class="ui container profile-segment-container">
         <div class="ui segment">
-          <h3 class="ui header">Quelques photos de chantiers réalisés: </h3>
+          <h3 class="ui header">Quelques photos de chantiers réalisés : </h3>
           <div class="ui three column grid">
             <div class="column">
-              <img src="/assets/images/image_2.png" class="ui image">
+              <div class="img-chantier img-chantier-1"></div>
             </div>
             <div class="column">
-              <img src="/assets/images/image_2.png" class="ui image">
+              <div class="img-chantier img-chantier-2"></div>
             </div>
             <div class="column">
-              <img src="/assets/images/image_2.png" class="ui image">
+              <div class="img-chantier img-chantier-3"></div>
             </div>
           </div>
         </div>
@@ -534,11 +696,18 @@ h3.ui.header{
       <!-- Les chantiers sur WeKay -->
       <div class="ui container profile-segment-container">
         <div class="ui segment">
-          <h3 class="ui header">Les chantiers sur WeKay: </h3>
-          <div class="ui comments">
+          <h3 class="ui header d-inline">Les chantiers sur WeKay :</h3>
+          <div class="ui star massive rating float-right mt-5" role="radiogroup">
+              <i aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+              <i aria-checked="false" aria-posinset="2" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+              <i aria-checked="true" aria-posinset="3" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+              <i aria-checked="false" aria-posinset="4" aria-setsize="5" class="icon" tabindex="0" role="radio"></i>
+              <i aria-checked="false" aria-posinset="5" aria-setsize="5" class="icon" tabindex="0" role="radio"></i>
+            </div>
+          <div class="ui comments font-m">
             <div class="comment">
-              <a class="avatar">
-                <img src="/assets/images/image_2.png">
+              <a class="avatar avatar-1">
+               
               </a>
               <div class="content">
                 <div class="author">Michel M.</div>
@@ -555,7 +724,7 @@ h3.ui.header{
             </div>
             <div class="comment">
               <a class="avatar">
-                <img src="/assets/images/image_2.png">
+                C
               </a>
               <div class="content">
                 <div class="author">Catherine R.</div>
@@ -571,7 +740,7 @@ h3.ui.header{
             </div>
             <div class="comment">
               <a class="avatar">
-                <img src="/assets/images/image_2.png">
+                B
               </a>
               <div class="content">
                 <div class="author">Bernardo K.</div>
@@ -590,34 +759,33 @@ h3.ui.header{
       <!-- Les recommandations externes -->
       <div class="ui container profile-segment-container">
         <div class="ui segment">
-          <h3 class="ui header">Les recoommandations externes </h3>
-          <div class="ui comments">
+          <h3 class="ui header d-inline">Les recommandations externes :</h3>
+          <button class="ui button bt-reco float-right " role="button">Recommander M.Zami</button> 
+          <div class="ui comments font-m">
             <div class="comment">
               <a class="avatar">
-                <img src="/assets/images/image_2.png">
+                M
               </a>
               <div class="content">
                 <div class="author">Maddy V.</div>
                 <div class="metadata">
                   <div>15 Septembre 2017</div>
-      
-                  <div class="text">M. Zami s'est occupé de l'ensemble de la charpente et de la toiture de ma nouvelle maison. Je suis très contente
+                </div>
+                <div class="text">M. Zami s'est occupé de l'ensemble de la charpente et de la toiture de ma nouvelle maison. Je suis très contente
                     de son travail et je le recommande vivement pour sa fiabilité.
-      
-                  </div>
                 </div>
               </div>
-              <div class="comment">
-                <a class="avatar">
-                  <img src="/assets/images/image_2.png">
-                </a>
-                <div class="content">
-                  <div class="author">Jean R.</div>
-                  <div class="metadata">
-                    <div>5 Mars 2017</div>
-                    <div class="text">Je recommande M.Zami pour sa rapidité d'éxécution et son sérieux.Je ferai de nouveau appel à lui si besoin.</div>
-                  </div>
+            </div>
+            <div class="comment">
+              <a class="avatar">
+               J
+              </a>
+              <div class="content">
+                <div class="author">Jean R.</div>
+                <div class="metadata">
+                  <div>5 Mars 2017</div>
                 </div>
+                <div class="text">Je recommande M.Zami pour sa rapidité d'éxécution et son sérieux.Je ferai de nouveau appel à lui si besoin.</div>
               </div>
             </div>
           </div>
@@ -627,105 +795,170 @@ h3.ui.header{
       <!-- Les labels qualités du professionnel -->
       <div class="ui container profile-segment-container">
           <div class="ui segment">
-            <h3 class="ui header">Les labels qualités du professionnel: </h3>
-            <div class="ui two column grid">
+            <h3 class="ui header">Les labels qualités du professionnel : </h3>
+            <div class="ui three column grid">
               <div class="column">
-                <img src="/assets/images/image_2.png" class="ui image">
+                <div class="label label-1"></div>
               </div>
               <div class="column">
-                <img src="/assets/images/image_2.png" class="ui image">
+                  <div class="label label-1"></div>
+              </div>
+              <div class="column">
+                  <div class="label label-1"></div>
               </div>
             </div>
           </div>
   
-          <button class="ui primary button center-block" role="button">Demander un devis</button> 
+          <button class="ui primary button center-block huge mt-40" role="button">Demander un devis</button> 
         </div>
+        <div class="leaf-deco"></div>
+        <!-- Reassurance -->
+        <div class="ui vertical segment bg-blue-medium border-orange-light" style="padding: 4em 0em;">
+            <div class="ui stackable grid">
+              <div class="row">
+                <div class="column">
+                  <h3 class="ui center aligned header white font-title font-xxl">3 raisons de nous faire confiance </h3>
+                </div>
+              </div>
+              <div class="three column row" style="padding: 2em 0em;">
+                <div class="center aligned column">
+                    <div class="wrapper-icone"><img src="/assets/images/icone-reason-1.png"  class="mt-20"></div>
+                  <p class="white  text-uppercase mt-20" style="font-size: 1.2em; padding: 0em 1.5em;">Des conseillers WeKay <br> à votre service</p>
+                </div>
+                <div class="center aligned column">
+                    <div class="wrapper-icone"><img src="/assets/images/icone-reason-2.png"  class="mt-20"></div>
+                  <p class="white  text-uppercase mt-20" style="font-size: 1.2em; padding: 0em 1.5em;">Des artisans qualifiés</p>
+                </div>
+                <div class="center aligned column">
+                  <div class="wrapper-icone"><img src="/assets/images/icone-reason-3.png"  class="mt-20"></div>
+                  <p class="white text-uppercase mt-20" style="font-size: 1.2em; padding: 0em 1.5em;">Un paiement sécurisé qui vous assure des travaux de qualité</p>
+                </div>
+              </div>
         
+            </div>
+          </div>  
         
-      <div class="ui container profile-segment-container">
+      <div class="ui vertical segment bg-white">
+        <div class="ui container stackable grid">
           <div class="row">
               <div class="column">
-                <h3 class="ui center aligned header mt-40" style="font-size: 3em;">Ces professionnels correspondent <br/> aussi à votre recherche !</h3>
+                <h3 class="ui center aligned header mt-40 font-title font-xxl">Ces professionnels correspondent <br/> aussi à votre recherche !</h3>
               </div>
           </div>      
-        
-        <div class="ui four cards">
-          <div class="ui card">
-            <img src="/assets/images/image_2.png" class="ui image">
-            <div class="content">
-              <div class="header">Charpentier, Couvreur</div>
-              <div class="meta">
-                <i aria-hidden="true" class="check disabled icon"></i>Kbis</div>
-              <div class="meta">
-                <i aria-hidden="true" class="check disabled icon"></i>Assurance décennale</div>
-              <div class="description">4 Chantiers</div>
-            </div>
-            <div class="extra center aligned content">
-              <div class="ui star massive rating" role="radiogroup">
-                <i aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
-                <i aria-checked="false" aria-posinset="2" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
-                <i aria-checked="false" aria-posinset="3" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
-                <i aria-checked="false" aria-posinset="4" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
-                <i aria-checked="true" aria-posinset="5" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+          <div class="four column row mt-40">
+            <div class="center aligned column">
+              <div class="wrapper-card">
+                <div class="picture-artisan p-20">
+                    <div class="name white text-uppercase bold mt-100">M. Zami</div>
+                    <div class="localisation white bold">
+                      <span class="pin-map"></span> Martinique
+                    </div>
+                </div>
+                <div class="content">
+                  <div class="header text-uppercase blue-light bold category">Peintre, Plombier</div>
+                  <div class="meta mt-10">
+                    <i aria-hidden="true" class="check icon blue-light"></i>Kbis</div>
+                  <div class="meta">
+                      <i aria-hidden="true" class=""></i></div>
+                  <div class="description mt-20 bold">11 Chantiers</div>
+                </div>
+                <div class="extra center aligned content text-center pt-10">
+                  <div class="ui star massive rating" role="radiogroup">
+                    <i aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                    <i aria-checked="false" aria-posinset="2" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                    <i aria-checked="false" aria-posinset="3" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                    <i aria-checked="false" aria-posinset="4" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                    <i aria-checked="true" aria-posinset="5" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                  </div>
+                </div>
+                <button class="ui primary button center-block mb-20" role="button">Demander un devis</button>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="ui card">
-            <img src="/assets/images/image_2.png" class="ui image">
-            <div class="content">
-              <div class="header">Peintre, Plombier</div>
-              <div class="meta">
-                <i aria-hidden="true" class="check disabled icon"></i>Kbis</div>
-              <div class="description">11 Chantiers</div>
-            </div>
-            <div class="extra center aligned content">
-              <div class="ui star massive rating" role="radiogroup">
-                <i aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
-                <i aria-checked="false" aria-posinset="2" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
-                <i aria-checked="false" aria-posinset="3" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
-                <i aria-checked="false" aria-posinset="4" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
-                <i aria-checked="true" aria-posinset="5" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
-              </div>
-            </div>
-          </div>
-          <div class="ui card">
-            <img src="/assets/images/image_2.png" class="ui image">
-            <div class="content">
-              <div class="header">Rénovation intérieur</div>
-              <div class="meta">
-                <i aria-hidden="true" class="check disabled icon"></i>Kbis</div>
-              <div class="meta">
-                <i aria-hidden="true" class="check disabled icon"></i>Assurance décennale</div>
-              <div class="description">7 Chantiers</div>
-            </div>
-            <div class="extra center aligned content">
-              <div class="ui star massive rating" role="radiogroup">
-                <i aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
-                <i aria-checked="false" aria-posinset="2" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
-                <i aria-checked="false" aria-posinset="3" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
-                <i aria-checked="false" aria-posinset="4" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
-                <i aria-checked="true" aria-posinset="5" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
-              </div>
-            </div>
-          </div>
-          <div class="ui card">
-            <img src="/assets/images/image_2.png" class="ui image">
-            <div class="content">
-              <div class="header">Electricien</div>
-              <div class="meta">
-                <i aria-hidden="true" class="check disabled icon"></i>Kbis</div>
-              <div class="description">8 Chantiers</div>
-            </div>
-            <div class="extra center aligned content">
-              <div class="ui star massive rating" role="radiogroup">
-                <i aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
-                <i aria-checked="false" aria-posinset="2" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
-                <i aria-checked="false" aria-posinset="3" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
-                <i aria-checked="false" aria-posinset="4" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
-                <i aria-checked="true" aria-posinset="5" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
-              </div>
-            </div>
-          </div>
+              <div class="center aligned column">
+                <div class="wrapper-card">
+                    <div class="picture-artisan p-20">
+                        <div class="name white text-uppercase bold mt-100">M. Zami</div>
+                        <div class="localisation white bold">
+                          <span class="pin-map"></span> Martinique
+                        </div>
+                    </div>
+                    <div class="content">
+                      <div class="header text-uppercase blue-light bold category">Peintre, Plombier</div>
+                      <div class="meta mt-10">
+                        <i aria-hidden="true" class="check icon blue-light"></i>Kbis</div>
+                      <div class="meta">
+                          <i aria-hidden="true" class=""></i></div>
+                      <div class="description mt-20 bold">11 Chantiers</div>
+                    </div>
+                    <div class="extra center aligned content text-center pt-10">
+                      <div class="ui star massive rating" role="radiogroup">
+                        <i aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                        <i aria-checked="false" aria-posinset="2" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                        <i aria-checked="false" aria-posinset="3" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                        <i aria-checked="false" aria-posinset="4" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                        <i aria-checked="true" aria-posinset="5" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                      </div>
+                    </div>
+                    <button class="ui primary button center-block mb-20" role="button">Demander un devis</button>
+                  </div>
+                </div>
+                <div class="center aligned column">
+                  <div class="wrapper-card">
+                      <div class="picture-artisan p-20">
+                          <div class="name white text-uppercase bold mt-100">M. Zami</div>
+                          <div class="localisation white bold">
+                            <span class="pin-map"></span> Martinique
+                          </div>
+                      </div>
+                      <div class="content">
+                        <div class="header text-uppercase blue-light bold category">Peintre, Plombier</div>
+                        <div class="meta mt-10">
+                          <i aria-hidden="true" class="check icon blue-light"></i>Kbis</div>
+                        <div class="meta">
+                            <i aria-hidden="true" class=""></i></div>
+                        <div class="description mt-20 bold">11 Chantiers</div>
+                      </div>
+                      <div class="extra center aligned content text-center pt-10">
+                        <div class="ui star massive rating" role="radiogroup">
+                          <i aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                          <i aria-checked="false" aria-posinset="2" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                          <i aria-checked="false" aria-posinset="3" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                          <i aria-checked="false" aria-posinset="4" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                          <i aria-checked="true" aria-posinset="5" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                        </div>
+                      </div>
+                    <button class="ui primary button center-block mb-20" role="button">Demander un devis</button>
+                    </div>
+                  </div>
+                  <div class="center aligned column">
+                      <div class="wrapper-card">
+                          <div class="picture-artisan p-20">
+                              <div class="name white text-uppercase bold mt-100">M. Zami</div>
+                              <div class="localisation white bold">
+                                <span class="pin-map"></span> Martinique
+                              </div>
+                          </div>
+                          <div class="content">
+                            <div class="header text-uppercase blue-light bold category">Peintre, Plombier</div>
+                            <div class="meta mt-10"><i aria-hidden="true" class="check icon blue-light"></i>Kbis</div>
+                            <div class="meta"><i aria-hidden="true" class=""></i></div>
+                            <div class="description mt-20 bold">11 Chantiers</div>
+                          </div>
+                          <div class="extra center aligned content text-center pt-10">
+                            <div class="ui star massive rating" role="radiogroup">
+                              <i aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                              <i aria-checked="false" aria-posinset="2" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                              <i aria-checked="false" aria-posinset="3" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                              <i aria-checked="false" aria-posinset="4" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                              <i aria-checked="true" aria-posinset="5" aria-setsize="5" class="active icon" tabindex="0" role="radio"></i>
+                            </div>
+                          </div>
+                          <button class="ui primary button center-block mb-20" role="button">Demander un devis</button>
+                      </div>
+                    </div>
+                </div>
+            
+          <button class="ui primary button center-block huge mt-40 mb-40" role="button">Trouver un pro</button> 
         </div>
       </div>
     </div>
