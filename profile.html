@@ -517,6 +517,7 @@ a.return{
 .pro-summary {
     padding-top: 3em;;
     background-color: darkslategrey;
+    border-bottom: 3px solid white;
 }
 
 .pro-summary-details {
@@ -555,9 +556,23 @@ a.return{
     right: 20px;
 }
 
+.ui.grid>.row.pro-summary-details{
+  padding-top: 0rem!important;
+}
+
 @media only screen and (max-width: 768px) {
       .ui.massive.rating{
         font-size: 1.3rem!important;
+      }
+
+      .nb-chantier, .nb-recommandation{
+         display: block;
+         margin-top: 15px;
+         margin-left: 15px;
+      }
+
+      .pro-summary-avatar{
+        height:300px;
       }
     }
 
@@ -589,6 +604,12 @@ a.return{
       .bt-reco.float-right{
         float:none;
       }
+
+      .nb-chantier, .nb-recommandation{
+         display: block;
+         margin-top: 15px;
+         margin-left: 15px;
+      }
     }
 
 
@@ -617,8 +638,8 @@ a.return{
     <div class="pro-summary-wrapper">
       <div class="pro-summary">
         <div class="ui container white mb-20"><span class="arrow-white"></span><a href="" class="return">Retour aux réultats de votre recherche</a></div>
-        <div class="ui container">
-          <div class="ui grid pro-summary-details">
+        <div class="ui container stackable grid">
+          <div class="ui row pro-summary-details">
             <div class="six wide column pro-summary-avatar">
              
             </div>
@@ -677,9 +698,9 @@ a.return{
   
       <!-- Photos de chantiers -->
       <div class="ui container profile-segment-container">
-        <div class="ui segment">
+        <div class="ui segment grid stackable">
           <h3 class="ui header">Quelques photos de chantiers réalisés : </h3>
-          <div class="ui three column grid">
+          <div class="ui three column row">
             <div class="column">
               <div class="img-chantier img-chantier-1"></div>
             </div>
@@ -793,22 +814,24 @@ a.return{
       </div>
   
       <!-- Les labels qualités du professionnel -->
-      <div class="ui container profile-segment-container">
-          <div class="ui segment">
+      <div class="ui vertical segment">
+        <div class="ui container profile-segment-container">
+          <div class="ui segment grid stackable">
             <h3 class="ui header">Les labels qualités du professionnel : </h3>
-            <div class="ui three column grid">
-              <div class="column">
+            <div class="ui three column row">
+              <div class="three column grid">
                 <div class="label label-1"></div>
               </div>
-              <div class="column">
+              <div class="three column grid">
                   <div class="label label-1"></div>
               </div>
-              <div class="column">
+              <div class="three column grid">
                   <div class="label label-1"></div>
               </div>
             </div>
           </div>
-  
+      </div>
+      
           <button class="ui primary button center-block huge mt-40" role="button">Demander un devis</button> 
         </div>
         <div class="leaf-deco"></div>
